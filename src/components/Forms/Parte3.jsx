@@ -1,35 +1,19 @@
-import { useState, useEffect } from "react";
-import { FactoresSistemaPreguntasArray } from "../../textos/preguntas3"; // Asegúrate de que la ruta sea correcta
-import CustomSelect from "../CustomSelect/CustomSelect"; // Asegúrate de que la ruta sea correcta
-import "./styles/forms.css";
+import { useState, useEffect } from "react"
+import { FactoresSistemaPreguntasArray } from "../../textos/preguntas3"
+import CustomSelect from "../CustomSelect/CustomSelect"
+import "./styles/forms.css"
 
 
 const Parte3 = ({ step, setStep, payload }) => {
-  // Inicializar el estado de las respuestas como un arreglo vacío
-  const [respuestas, setRespuestas] = useState(
-    Array(FactoresSistemaPreguntasArray.length).fill(""),
-  ); // Cambié a 'FactoresSistemaPreguntasArray'
-
-  // Función para actualizar la respuesta en función del índice
-  const setRespuestaFunc = (index, value) => {
-    const newRespuestas = [...respuestas];
-    newRespuestas[index] = value;
-    setRespuestas(newRespuestas);
-  };
-
-  // Función para manejar el envío del formulario
-  const handlePersonalInfoSubmit = (e) => {
-    e.preventDefault();
-    console.log(respuestas); // Aquí puedes manejar las respuestas
-  };
 
   useEffect(() => {
     console.log('informacion acumulada hasta ahora')
     console.log(payload)
   }, [payload])
+
   return (
     <div className="form-container">
-      <form onSubmit={handlePersonalInfoSubmit}>
+      <form>
         <h1>Factores del sistema Familiar</h1>
         <div id="arreglo">
           {FactoresSistemaPreguntasArray.map((pregunta, i) => (
@@ -38,8 +22,6 @@ const Parte3 = ({ step, setStep, payload }) => {
               pregunta={pregunta.pregunta}
               preguntaInputName={pregunta.preguntaInputName}
               opcionesArray={pregunta.opciones}
-              respuesta={respuestas[i]}
-              setRespuestaFunc={(value) => setRespuestaFunc(i, value)}
               tipo={pregunta.tipo}
             />
           ))}
@@ -49,7 +31,7 @@ const Parte3 = ({ step, setStep, payload }) => {
             type="button"
             className="button"
             onClick={(e) => {
-              setStep(step - 1);
+              setStep(step - 1)
             }}
           >
             {"atras"}
@@ -58,7 +40,7 @@ const Parte3 = ({ step, setStep, payload }) => {
             type="button"
             className="button"
             onClick={(e) => {
-              setStep(step + 1);
+              setStep(step + 1)
             }}
           >
             {"siguiente"}
@@ -66,7 +48,7 @@ const Parte3 = ({ step, setStep, payload }) => {
         </div>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default Parte3;
+export default Parte3

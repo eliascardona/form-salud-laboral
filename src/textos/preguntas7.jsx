@@ -52,7 +52,7 @@ export const SistemaCardiovascularPreguntasArray = [
       <>
         CUESTIONARIO DE FACTORES DE RIESGO <br />
         <br />
-        Bajo riesgo DM igual o mayor a 10 puntos ; Alto riesgo DM=≥ 10 puntos{" "}
+        Bajo riesgo DM igual o mayor a 10 puntos  Alto riesgo DM=≥ 10 puntos{" "}
         <br />
         <br />
         1. ¿Alguno de sus hermanos padece o padeció diabetes mellitus? SI=1

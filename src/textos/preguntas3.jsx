@@ -26,4 +26,4 @@ export const FactoresSistemaPreguntasArray = [
     preguntaInputName: "fam13",
     opciones: [{ valor: "Buena" }, { valor: "Regular" }, { valor: "Mala" }],
   },
-];
+]

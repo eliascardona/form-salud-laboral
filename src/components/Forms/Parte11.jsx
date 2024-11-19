@@ -1,32 +1,19 @@
-import { useState, useEffect } from "react";
-import { PrevencionPeligrosPreguntasArray } from "../../textos/preguntas11"; // Asegúrate de que la ruta sea correcta
-import CustomSelect from "../CustomSelect/CustomSelect"; // Asegúrate de que la ruta sea correcta
-import "./styles/forms.css";
+import { useState, useEffect } from "react"
+import { PrevencionPeligrosPreguntasArray } from "../../textos/preguntas11"
+import CustomSelect from "../CustomSelect/CustomSelect"
+import "./styles/forms.css"
 
 
 const Parte11 = ({ step, setStep, payload }) => {
-  const [respuestas, setRespuestas] = useState(
-    Array(PrevencionPeligrosPreguntasArray.length).fill(""),
-  );
-
-  const setRespuestaFunc = (index, value) => {
-    const newRespuestas = [...respuestas];
-    newRespuestas[index] = value;
-    setRespuestas(newRespuestas);
-  };
-
-  const handlePersonalInfoSubmit = (e) => {
-    e.preventDefault();
-    console.log(respuestas);
-  };
 
   useEffect(() => {
     console.log('informacion acumulada hasta ahora')
     console.log(payload)
   }, [payload])
+
   return (
     <div className="form-container">
-      <form onSubmit={handlePersonalInfoSubmit}>
+      <form>
         <h1>Prevención de Peligros para la Vida</h1>
         <div id="arreglo">
           {PrevencionPeligrosPreguntasArray.map((pregunta, i) => (
@@ -35,8 +22,6 @@ const Parte11 = ({ step, setStep, payload }) => {
               pregunta={pregunta.pregunta}
               preguntaInputName={pregunta.preguntaInputName}
               opcionesArray={pregunta.opciones}
-              respuesta={respuestas[i]}
-              setRespuestaFunc={(value) => setRespuestaFunc(i, value)}
               tipo={pregunta.tipo}
             />
           ))}
@@ -46,7 +31,7 @@ const Parte11 = ({ step, setStep, payload }) => {
             type="button"
             className="button"
             onClick={(e) => {
-              setStep(step - 1);
+              setStep(step - 1)
             }}
           >
             {"atras"}
@@ -55,7 +40,7 @@ const Parte11 = ({ step, setStep, payload }) => {
             type="button"
             className="button"
             onClick={(e) => {
-              setStep(step + 1);
+              setStep(step + 1)
             }}
           >
             {"siguiente"}
@@ -63,7 +48,7 @@ const Parte11 = ({ step, setStep, payload }) => {
         </div>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default Parte11;
+export default Parte11

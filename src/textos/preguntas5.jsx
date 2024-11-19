@@ -226,4 +226,4 @@ export const EstadoSisSaludPreguntasArray = [
   },
   { pregunta: "¿Cuál?:",
     preguntaInputName: "situacionsalud44", opciones: [], tipo: "texto" },
-];
+]

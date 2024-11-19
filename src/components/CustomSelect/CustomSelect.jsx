@@ -1,7 +1,7 @@
-import PropTypes from "prop-types";
-import "./CustomSelect.css";
+import PropTypes from "prop-types"
+import "./CustomSelect.css"
 
-export default function CustomSelect({ pregunta, preguntaInputName, opcionesArray = [], respuesta, setRespuestaFunc, }) {
+export default function CustomSelect({ pregunta, preguntaInputName, opcionesArray = [] }) {
   return (
     <div className="g1Item">
       <h3>{pregunta}</h3>
@@ -10,8 +10,6 @@ export default function CustomSelect({ pregunta, preguntaInputName, opcionesArra
           <input
             type="date"
             name="fecha"
-            value={respuesta}
-            onChange={(e) => setRespuestaFunc(e.target.value)}
           />
         ) : pregunta.toLowerCase().includes("edad") ? (
           <input
@@ -19,25 +17,17 @@ export default function CustomSelect({ pregunta, preguntaInputName, opcionesArra
             name="edad"
             min="0"
             max="100"
-            value={respuesta}
-            onChange={(e) => setRespuestaFunc(e.target.value)}
             placeholder="Ingresa tu edad"
           />
         ) : (
           <input
             type="text"
             name={`${preguntaInputName.toLowerCase()}`}
-            value={respuesta}
-            onChange={(e) => setRespuestaFunc(e.target.value)}
             placeholder={`Ingresa ${preguntaInputName.toLowerCase()}`}
           />
         )
       ) : (
-        <select
-          value={respuesta}
-          name={preguntaInputName}
-          onChange={(e) => setRespuestaFunc(e.target.value)}
-        >
+        <select name={preguntaInputName}>
           <option value="">Seleccione</option>
           {opcionesArray.map((opcion, i) => (
             <option value={opcion.valor} key={i}>
@@ -47,7 +37,7 @@ export default function CustomSelect({ pregunta, preguntaInputName, opcionesArra
         </select>
       )}
     </div>
-  );
+  )
 }
 
 CustomSelect.propTypes = {
@@ -55,9 +45,7 @@ CustomSelect.propTypes = {
   preguntaInputName: PropTypes.string.isRequired,
   opcionesArray: PropTypes.arrayOf(
     PropTypes.shape({
-      valor: PropTypes.string.isRequired, // ahora se espera un objeto con una propiedad 'valor'
+      valor: PropTypes.string.isRequired,
     }),
   ),
-  respuesta: PropTypes.string.isRequired,
-  setRespuestaFunc: PropTypes.func.isRequired,
-};
+}

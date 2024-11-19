@@ -1,32 +1,19 @@
-import { useState, useEffect } from "react";
-import { RequisitosAutoCuidadoPreguntasArray } from "../../textos/preguntas6"; // Asegúrate de que la ruta sea correcta
-import CustomSelect from "../CustomSelect/CustomSelect"; // Asegúrate de que la ruta sea correcta
-import "./styles/forms.css";
+import { useState, useEffect } from "react"
+import { RequisitosAutoCuidadoPreguntasArray } from "../../textos/preguntas6"
+import CustomSelect from "../CustomSelect/CustomSelect"
+import "./styles/forms.css"
 
 
 const Parte6 = ({ step, setStep, payload }) => {
-  const [respuestas, setRespuestas] = useState(
-    Array(RequisitosAutoCuidadoPreguntasArray.length).fill(""),
-  );
-
-  const setRespuestaFunc = (index, value) => {
-    const newRespuestas = [...respuestas];
-    newRespuestas[index] = value;
-    setRespuestas(newRespuestas);
-  };
-
-  const handlePersonalInfoSubmit = (e) => {
-    e.preventDefault();
-    console.log(respuestas);
-  };
 
   useEffect(() => {
     console.log('informacion acumulada hasta ahora')
     console.log(payload)
   }, [payload])
+
   return (
     <div className="form-container">
-      <form onSubmit={handlePersonalInfoSubmit}>
+      <form>
         <h1>Requisitos de Autocuidado Universales</h1>
         <div id="arreglo">
           {RequisitosAutoCuidadoPreguntasArray.map((pregunta, i) => (
@@ -46,7 +33,7 @@ const Parte6 = ({ step, setStep, payload }) => {
             type="button"
             className="button"
             onClick={(e) => {
-              setStep(step - 1);
+              setStep(step - 1)
             }}
           >
             {"atras"}
@@ -55,7 +42,7 @@ const Parte6 = ({ step, setStep, payload }) => {
             type="button"
             className="button"
             onClick={(e) => {
-              setStep(step + 1);
+              setStep(step + 1)
             }}
           >
             {"siguiente"}
@@ -63,7 +50,7 @@ const Parte6 = ({ step, setStep, payload }) => {
         </div>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default Parte6;
+export default Parte6

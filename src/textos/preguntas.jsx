@@ -32,4 +32,4 @@ export const PreguntasArray = [
     opciones: [],
     tipo: "texto"
   },
-];
+]

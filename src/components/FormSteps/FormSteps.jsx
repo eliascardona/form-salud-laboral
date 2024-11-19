@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useFormStore } from '../Forms/(zustand)/formStore'
 
 import {
@@ -42,17 +41,7 @@ const SomethingWrongComponent = () => {
 
 export const FormSteps = ({ step, setStep }) => {
   const StepComponent = components[step] || <SomethingWrongComponent />
-  const { inputValue, setInputValue } = useFormStore()
-
-  useEffect(() => {
-    return () => {
-      setInputValue((prev) => ({
-          ...prev,
-          nombre: "lol",
-        })
-      )
-    }
-  }, [inputValue])
+  const { inputValue } = useFormStore()
 
   return (
     <>

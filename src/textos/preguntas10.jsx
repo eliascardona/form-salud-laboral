@@ -51,4 +51,4 @@ export const AuditivoOcularPreguntasArray = [
     preguntaInputName: "auditivoocular7",
     opciones: [{ valor: "Especificar fecha" }],
   },
-];
+]

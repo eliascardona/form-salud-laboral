@@ -19,4 +19,4 @@ export const MantenimientoAlimentosPreguntasArray = [
     preguntaInputName: "trabajoalimento4",
     opciones: [{ valor: "Si " }, { valor: "No " }],
   },
-];
+]

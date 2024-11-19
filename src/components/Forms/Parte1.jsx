@@ -1,22 +1,12 @@
-import { useState, useEffect } from "react";
-import { PreguntasArray } from "../../textos/preguntas"; // Asegúrate de que la ruta sea correcta
-import CustomSelect from "../CustomSelect/CustomSelect"; // Asegúrate de que la ruta sea correcta
-import "./styles/forms.css";
-import EmployeeIdentForm from "./staticFields/EmployeeIdentForm";
+import { useState, useEffect } from "react"
+import { PreguntasArray } from "../../textos/preguntas"
+import CustomSelect from "../CustomSelect/CustomSelect"
+import EmployeeIdentForm from "./staticFields/EmployeeIdentForm"
 import { useFormStore } from './(zustand)/formStore'
+import "./styles/forms.css"
 
 
 const Parte1 = ({ step, setStep, payload }) => {
-  const [respuestas, setRespuestas] = useState(
-    Array(PreguntasArray.length).fill(""),
-  );
-
-  const setRespuestaFunc = (index, value) => {
-    const newRespuestas = [...respuestas];
-    newRespuestas[index] = value;
-    setRespuestas(newRespuestas);
-  };
-
   const { setInputValue } = useFormStore()
 
   const handleUpdate = (evt) => {
@@ -69,8 +59,6 @@ const Parte1 = ({ step, setStep, payload }) => {
                 pregunta={pregunta.pregunta}
                 preguntaInputName={pregunta.preguntaInputName}
                 opcionesArray={pregunta.opciones}
-                respuesta={respuestas[i]}
-                setRespuestaFunc={(value) => setRespuestaFunc(i, value)}
                 tipo={pregunta.tipo}
               />
             ))}

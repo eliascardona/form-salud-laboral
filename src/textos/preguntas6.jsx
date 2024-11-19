@@ -42,4 +42,4 @@ export const RequisitosAutoCuidadoPreguntasArray = [
     preguntaInputName: "autocuidado6",
     opciones: [{ valor: "1=Si " }, { valor: "0=No " }],
   },
-];
+]

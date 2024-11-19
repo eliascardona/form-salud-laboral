@@ -51,4 +51,4 @@ export const FactoresSocioEcoPreguntasArray = [
     preguntaInputName: "socioeconomico4",
     opciones: [{ valor: "confianza" }, { valor: "sindicalizado" }],
   },
-];
+]

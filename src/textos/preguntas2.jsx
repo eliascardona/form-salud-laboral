@@ -87,4 +87,4 @@ export const AreaTrabajoPreguntasArray = [
       { valor: "5 o mas veces" },
     ],
   },
-];
+]
