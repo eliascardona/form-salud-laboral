@@ -26,8 +26,10 @@ export const PreguntasArray = [
       { valor: "Doctorado" },
     ],
   },
-  { pregunta: "Empresa:",
-    preguntaInputName: "empresa", opciones: [], tipo: "texto" },
-  { pregunta: "Folio:",
-    preguntaInputName: "folio", opciones: [], tipo: "texto" },
+  {
+    pregunta: "Folio:",
+    preguntaInputName: "folio",
+    opciones: [],
+    tipo: "texto"
+  },
 ];

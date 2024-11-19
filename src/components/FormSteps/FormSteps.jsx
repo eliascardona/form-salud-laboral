@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { useFormStore } from '../Forms/(zustand)/formStore'
+
 import {
   Parte1,
   Parte2,
@@ -12,8 +15,7 @@ import {
   Parte11,
   Parte12,
   Parte13,
-} from "../Forms/";
-
+} from "../Forms/"
 const components = [
   null,
   Parte1,
@@ -29,14 +31,28 @@ const components = [
   Parte11,
   Parte12,
   Parte13,
-];
-
-import { useFormStore } from '../Forms/(zustand)/formStore'
-
+]
+const SomethingWrongComponent = () => {
+  return (
+    <div style={{padding:'2rem'}}>
+      <strong>algo raro paso</strong>
+    </div>
+  )
+}
 
 export const FormSteps = ({ step, setStep }) => {
-  const StepComponent = components[step] || (() => <strong>algo raro paso</strong>)
-  const { inputValue } = useFormStore()
+  const StepComponent = components[step] || <SomethingWrongComponent />
+  const { inputValue, setInputValue } = useFormStore()
+
+  useEffect(() => {
+    return () => {
+      setInputValue((prev) => ({
+          ...prev,
+          nombre: "lol",
+        })
+      )
+    }
+  }, [inputValue])
 
   return (
     <>
@@ -44,21 +60,3 @@ export const FormSteps = ({ step, setStep }) => {
     </>
   )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

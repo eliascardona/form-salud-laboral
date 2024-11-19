@@ -1,0 +1,35 @@
+.marginBottom {
+    margin-bottom: 1rem;
+}
+
+.inputStyle {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.labelStyle {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.formStyle {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.twoColumns {
+    width: 95%;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}

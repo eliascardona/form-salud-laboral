@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ActividadReposoPreguntasArray } from "../../textos/preguntas9"; // Asegúrate de que la ruta sea correcta
-import CustomSelect from "../CustomSelect"; // Asegúrate de que la ruta sea correcta
-import "../Ui/PersonalInfoForm.css";
+import CustomSelect from "../CustomSelect/CustomSelect"; // Asegúrate de que la ruta sea correcta
+import "./styles/forms.css";
 
 
 const Parte9 = ({ step, setStep, payload }) => {

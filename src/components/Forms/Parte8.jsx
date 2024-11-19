@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { MantenimientoAlimentosPreguntasArray } from "../../textos/preguntas8"; // Asegúrate de que la ruta sea correcta
-import CustomSelect from "../CustomSelect"; // Asegúrate de que la ruta sea correcta
-import "../Ui/PersonalInfoForm.css";
+import CustomSelect from "../CustomSelect/CustomSelect"; // Asegúrate de que la ruta sea correcta
+import "./styles/forms.css";
 
 
 const Parte8 = ({ step, setStep, payload }) => {

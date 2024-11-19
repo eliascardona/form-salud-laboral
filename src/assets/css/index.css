@@ -23,11 +23,6 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 
-/* Eliminar los spinners en Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
 select,
 textarea,
 input[type="text"],
@@ -35,12 +30,13 @@ input[type="number"] {
   justify-self: center;
   font-size: 14px;
   width: 80%; /* Ancho completo */
-  outline: none;
-  padding: 8px;
-  border-radius: 10px;
-  border: 2px solid #27374d;
+  outline: 2px #3781c6;
+  padding: 8px 4px;
+  border-radius: .375rem;
+  border: 1px solid #6a6a6a;
   background: white;
   margin: 15px 0; /* 10px arriba y abajo */
+  box-shadow: rgba(10, 10, 10, 0.3) 0 0 2px 0;
 }
 .button-container {
   display: flex;

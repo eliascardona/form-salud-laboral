@@ -9,12 +9,14 @@ export default function CustomSelect({ pregunta, preguntaInputName, opcionesArra
         pregunta.toLowerCase().includes("fecha") ? (
           <input
             type="date"
+            name="fecha"
             value={respuesta}
             onChange={(e) => setRespuestaFunc(e.target.value)}
           />
         ) : pregunta.toLowerCase().includes("edad") ? (
           <input
             type="number"
+            name="edad"
             min="0"
             max="100"
             value={respuesta}
@@ -24,9 +26,10 @@ export default function CustomSelect({ pregunta, preguntaInputName, opcionesArra
         ) : (
           <input
             type="text"
+            name={`${preguntaInputName.toLowerCase()}`}
             value={respuesta}
             onChange={(e) => setRespuestaFunc(e.target.value)}
-            placeholder={`Ingresa ${pregunta.toLowerCase()}`}
+            placeholder={`Ingresa ${preguntaInputName.toLowerCase()}`}
           />
         )
       ) : (
