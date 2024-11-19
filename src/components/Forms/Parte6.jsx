@@ -22,8 +22,6 @@ const Parte6 = ({ step, setStep, payload }) => {
               pregunta={pregunta.pregunta}
               preguntaInputName={pregunta.preguntaInputName}
               opcionesArray={pregunta.opciones}
-              respuesta={respuestas[i]}
-              setRespuestaFunc={(value) => setRespuestaFunc(i, value)}
               tipo={pregunta.tipo}
             />
           ))}

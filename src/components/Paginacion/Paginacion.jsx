@@ -1,5 +1,5 @@
 import React from "react"
-import "./Paginacion.css" // Asegúrate de importar el archivo CSS para estilos
+import "./Paginacion.css"
 
 const Pagination = ({ step, setStep, totalSteps }) => {
   const handlePrevious = () => {
@@ -17,7 +17,7 @@ const Pagination = ({ step, setStep, totalSteps }) => {
   const renderPageNumbers = () => {
     const pageNumbers = []
 
-    for (let i = 1 i <= totalSteps i++) {
+    for (let i=0; i<totalSteps; i++) {
       pageNumbers.push(
         <li key={i}>
           <a

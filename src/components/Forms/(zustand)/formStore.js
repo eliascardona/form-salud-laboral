@@ -3,7 +3,7 @@ import { create } from 'zustand'
 const useFormStore = create(
     (set) => ({
         inputValue: {},
-        setIputValue: (callback) =>
+        setInputValue: (callback) => 
             set(state => ({
                 inputValue: callback(state.inputValue)
             })

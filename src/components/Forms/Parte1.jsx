@@ -24,14 +24,10 @@ const Parte1 = ({ step, setStep, payload }) => {
       escolaridad: evt.target.escolaridad.value,
       folio: evt.target.folio.value,
     }
-    console.log(temp)
-
-    setInputValue(
-      (prev) => ({
-        ...prev,
-        ...temp,
-      })
-    )
+    setInputValue((prev) => ({
+      ...prev,
+      temp
+    }))
   }
 
   useEffect(() => {
