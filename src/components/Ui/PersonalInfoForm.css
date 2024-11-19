@@ -1,0 +1,17 @@
+.form-container {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.7);
+  max-width: 60vw;
+  max-height: 90vh;
+  margin: auto;
+  overflow: auto;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}

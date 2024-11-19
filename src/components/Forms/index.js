@@ -1,0 +1,13 @@
+export { default as Parte1 } from "./Parte1";
+export { default as Parte2 } from "./Parte2";
+export { default as Parte3 } from "./Parte3";
+export { default as Parte4 } from "./Parte4";
+export { default as Parte5 } from "./Parte5";
+export { default as Parte6 } from "./Parte6";
+export { default as Parte7 } from "./Parte7";
+export { default as Parte8 } from "./Parte8";
+export { default as Parte9 } from "./Parte9";
+export { default as Parte10 } from "./Parte10";
+export { default as Parte11 } from "./Parte11";
+export { default as Parte12 } from "./Parte12";
+export { default as Parte13 } from "./Parte13";
