@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import { PreguntasArray } from "../../textos/preguntas"
 import CustomSelect from "../CustomSelect/CustomSelect"
 import EmployeeIdentForm from "./staticFields/EmployeeIdentForm"

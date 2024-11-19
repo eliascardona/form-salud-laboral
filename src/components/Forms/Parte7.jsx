@@ -1,11 +1,34 @@
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import { SistemaCardiovascularPreguntasArray } from "../../textos/preguntas7"
 import CustomSelect from "../CustomSelect/CustomSelect"
 import "./styles/forms.css"
 
+import { useFormStore } from './(zustand)/formStore'
 
 const Parte7 = ({ step, setStep, payload }) => {
 
+  const { setInputValue } = useFormStore()
+
+  const handleUpdate = (evt) => {
+    evt.preventDefault()
+    const temp = {
+      nombre: evt.target.nombre.value,
+      apellidoMaterno: evt.target.apellidoMaterno.value,
+      apellidoPaterno: evt.target.apellidoPaterno.value,
+      edad: evt.target.edad.value,
+      empresa: {
+        id: evt.target.ide.value,
+      },
+      sexo: evt.target.sexo.value,
+      edocivil: evt.target.edocivil.value,
+      escolaridad: evt.target.escolaridad.value,
+      folio: evt.target.folio.value,
+    }
+    setInputValue((prev) => ({
+      ...prev,
+      temp
+    }))
+  }
   useEffect(() => {
     console.log('informacion acumulada hasta ahora')
     console.log(payload)
@@ -13,8 +36,15 @@ const Parte7 = ({ step, setStep, payload }) => {
 
   return (
     <div className="form-container">
-      <form>
-        <h1>Sistema Cardiovascular</h1>
+      <h1>Sistema Cardiovascular</h1>
+      <form
+        id="form2"
+        className="formStyle"
+        onSubmit={(e) => {
+          handleUpdate(e)
+          setStep(step + 1)
+        }}
+      >
         <div id="arreglo">
           {SistemaCardiovascularPreguntasArray.map((pregunta, i) => (
             <CustomSelect

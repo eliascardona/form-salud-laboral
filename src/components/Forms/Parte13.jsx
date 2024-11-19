@@ -1,11 +1,33 @@
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import { PromocionHumanoPreguntasArray } from "../../textos/preguntas13"
 import CustomSelect from "../CustomSelect/CustomSelect"
+import { useFormStore } from './(zustand)/formStore'
 import "./styles/forms.css"
 
 
 const Parte13 = ({ step, setStep, payload }) => {
+  const { setInputValue } = useFormStore()
 
+  const handleUpdate = (evt) => {
+    evt.preventDefault()
+    const temp = {
+      nombre: evt.target.nombre.value,
+      apellidoMaterno: evt.target.apellidoMaterno.value,
+      apellidoPaterno: evt.target.apellidoPaterno.value,
+      edad: evt.target.edad.value,
+      empresa: {
+        id: evt.target.ide.value,
+      },
+      sexo: evt.target.sexo.value,
+      edocivil: evt.target.edocivil.value,
+      escolaridad: evt.target.escolaridad.value,
+      folio: evt.target.folio.value,
+    }
+    setInputValue((prev) => ({
+      ...prev,
+      temp
+    }))
+  }
   useEffect(() => {
     console.log('informacion acumulada hasta ahora')
     console.log(payload)
