@@ -1,12 +1,9 @@
 .form-container {
-  padding: 20px;
-  background: white;
+  width: 70%;
+  justify-self: center;
+  padding: 1rem 2.25rem;
   border-radius: 10px;
-  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.7);
-  max-width: 60vw;
-  max-height: 90vh;
-  margin: auto;
-  overflow: auto;
+  box-shadow: rgba(10, 10, 10, 0.3) 0 2px 5px 0;
 }
 
 .grid1 {
