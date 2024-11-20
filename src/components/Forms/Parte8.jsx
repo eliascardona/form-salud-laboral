@@ -35,7 +35,7 @@ const Parte8 = ({ step, setStep, payload }) => {
 
   return (
     <div className="form-container">
-      <h1>Mantenimiento del Aporte Suficiente de Alimentos</h1>
+      <h3>Mantenimiento del Aporte Suficiente de Alimentos</h3>
       <form
         id="form2"
         className="formStyle"

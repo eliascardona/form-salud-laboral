@@ -35,7 +35,7 @@ const Parte3 = ({ step, setStep, payload }) => {
 
   return (
     <div className="form-container">
-      <h1>Factores del sistema Familiar</h1>
+      <h3>Factores del sistema Familiar</h3>
       <form
         id="form2"
         className="formStyle"

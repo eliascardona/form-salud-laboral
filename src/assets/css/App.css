@@ -1,12 +1,7 @@
 .Home__grid {
   width: 100%;
   display: grid;
-}
-
-.Home__content {
-  width: 90%;
-  display: grid;
-  grid-template-rows: 8% 92%;
-  justify-self: center;
+  place-items: center;
   padding-top: 2rem;
+  gap: 2rem;
 }

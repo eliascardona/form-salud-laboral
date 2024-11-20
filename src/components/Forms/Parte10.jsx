@@ -36,7 +36,7 @@ const Parte10 = ({ step, setStep, payload }) => {
   return (
     <div className="form-container">
       <form>
-        <h1>Sistema Auditivo y Ocular</h1>
+        <h3>Sistema Auditivo y Ocular</h3>
         <div id="arreglo">
           {AuditivoOcularPreguntasArray.map((pregunta, i) => (
             <CustomSelect

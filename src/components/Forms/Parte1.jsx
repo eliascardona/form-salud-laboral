@@ -37,7 +37,7 @@ const Parte1 = ({ step, setStep, payload }) => {
 
   return (
     <div className="form-container">
-      <h1>Datos Descriptivos de la Persona</h1>
+      <h3>Datos Descriptivos de la Persona</h3>
       <form
         id="form1"
         className="formStyle"

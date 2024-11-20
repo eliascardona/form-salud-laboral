@@ -35,7 +35,7 @@ const Parte4 = ({ step, setStep, payload }) => {
 
   return (
     <div className="form-container">
-      <h1>Factores Socioculturales y Económicos</h1>
+      <h3>Factores Socioculturales y Económicos</h3>
       <form
         id="form2"
         className="formStyle"

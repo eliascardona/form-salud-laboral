@@ -60,7 +60,7 @@ const Parte2 = ({ step, setStep, payload }) => {
 
   return (
     <div className="form-container">
-      <h1>Características del área de trabajo y valoración del trabajo</h1>
+      <h3>Características del área de trabajo y valoración del trabajo</h3>
       <form
         id="form2"
         className="formStyle"

@@ -35,7 +35,7 @@ const Parte6 = ({ step, setStep, payload }) => {
 
   return (
     <div className="form-container">
-      <h1>Requisitos de Autocuidado Universales</h1>
+      <h3>Requisitos de Autocuidado Universales</h3>
       <form
         id="form2"
         className="formStyle"

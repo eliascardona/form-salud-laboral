@@ -36,7 +36,7 @@ const Parte11 = ({ step, setStep, payload }) => {
   return (
     <div className="form-container">
       <form>
-        <h1>Prevención de Peligros para la Vida</h1>
+        <h3>Prevención de Peligros para la Vida</h3>
         <div id="arreglo">
           {PrevencionPeligrosPreguntasArray.map((pregunta, i) => (
             <CustomSelect

@@ -1,18 +1,15 @@
 import { useEffect, useState } from "react"
 import "./Pagination.css"
 
-function NavItem({ index, content, onClickCB }) {
-  let defaultStyle = {
-    borderBottom: 'inherit',
-  }
-  let activeStyle = {
-    borderBottom: '2px solid aqua',
-  }
+function NavItem({ step, index, content, onClickCB }) {
   return (
     <div
       className="Nav__navItem"
       onClick={onClickCB}
-      style={index === content ? activeStyle : defaultStyle}
+      style={{
+        borderBottom:`${step===index+1 ? '2px solid #0d6efd' : '2px solid #6a6a6a'}`,
+        color:`${step===index+1 ? '#0d6efd' : '#6a6a6a'}`
+      }}
     >
       <strong>
         {content}
@@ -21,15 +18,7 @@ function NavItem({ index, content, onClickCB }) {
   )
 }
 
-export default function Pagination({ pageIndicator, step, setStep, totalSteps }) {
-  const [vrender, setVRender] = useState(false)
-  useEffect(() => {
-    if(Array.isArray(pageIndicator)) {
-      setVRender(true)
-    }
-    console.log(vrender)
-  }, [pageIndicator])
-
+export default function Pagination({ pageIndicator, step, setStep }) {
   return (
     <div className="Nav__navigation">
       {
@@ -38,16 +27,11 @@ export default function Pagination({ pageIndicator, step, setStep, totalSteps })
           let kv = `nav_${ran}_${i}`
           return (
             <NavItem 
+              step={step}
               index={i}
               content={`${el}`}
               onClickCB={() => {
-                if (step > 1) {
-                  setStep(step - 1)
-                } else if (step < totalSteps) {
-                  setStep(step + 1)
-                }
-                console.log('que raro')
-                setStep(p => p)
+                setStep(i+1)
               }}
               key={kv}
             />

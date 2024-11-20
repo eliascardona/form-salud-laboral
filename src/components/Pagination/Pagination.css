@@ -1,17 +1,22 @@
 .Nav__navigation {
-  width: 90%;
-  height: 80%;
+  width: 88%;
   display: grid;
   grid-auto-flow: column;
+  justify-self: center;
   place-self: center;
   place-items: center;
+  padding: 0 .25rem;
   text-align: center;
-  box-shadow: rgba(10, 10, 10, 0.4) 0 0 2px 0;
 }
 
 .Nav__navItem {
-  width: 90%;
-  justify-self: center;
-  border-right: 1px solid #5a5a5a;
-  border-bottom: 1px solid #5a5a5a;
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+
+.Nav__navItem > strong {
+  width: 100%;
+  place-self: center;
+  line-height: 200%;
 }

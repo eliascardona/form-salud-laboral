@@ -35,7 +35,7 @@ const Parte5 = ({ step, setStep, payload }) => {
 
   return (
     <div className="form-container">
-      <h1>Estado y Sistema de Salud</h1>
+      <h3>Estado y Sistema de Salud</h3>
       <form
         id="form2"
         className="formStyle"
