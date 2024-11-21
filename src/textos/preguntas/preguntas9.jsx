@@ -1,4 +1,4 @@
-export const ActividadReposoPreguntasArray = [
+const ActividadReposoPreguntasArray = [
   {
     pregunta: "1. Realiza esfuerzo físico muy pesado ",
     preguntaInputName: "trabajoexigencia1",
@@ -163,3 +163,5 @@ export const ActividadReposoPreguntasArray = [
     opciones: [{ valor: "Sí" }, { valor: "No" }],
   },
 ]
+
+export default ActividadReposoPreguntasArray

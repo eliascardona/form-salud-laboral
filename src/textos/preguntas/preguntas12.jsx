@@ -1,4 +1,4 @@
-export const FactoresAmbientalesPreguntasArray = [
+const FactoresAmbientalesPreguntasArray = [
   {
     pregunta: (
       <>
@@ -64,7 +64,7 @@ export const FactoresAmbientalesPreguntasArray = [
   {
     pregunta: (
       <>
-        En su área de trabajo está usted constantemente en contacto con:
+        En su área de trabajo está usted defaultantemente en contacto con:
         <br />
         <br />
         12. Contaminantes biológicos infecciosos (virus, bacterias,hongos)
@@ -320,3 +320,5 @@ export const FactoresAmbientalesPreguntasArray = [
     opciones: [{ valor: "Sí" }, { valor: "No" }],
   },
 ]
+
+export default FactoresAmbientalesPreguntasArray

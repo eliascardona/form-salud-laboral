@@ -7,6 +7,20 @@ body {
 	font-style: normal;
 }
 
+.button {
+  padding: 1rem 4rem;
+  margin: 1rem .5rem;
+  border: 1px #5a5a5a solid;
+  border-radius: .375rem;
+  background-color: transparent;
+  font-size: 1.065em;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
 select,
 textarea,
 input[type="text"],
@@ -20,18 +34,4 @@ input[type="number"] {
   border-radius: .375rem;
   box-shadow: rgba(10, 10, 10, 0.3) 0 0 2px 0;
   font-size: 16px;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-}
-
-.button {
-  font-weight: 600;
-  padding: .5rem 1rem;
-  margin: 1rem .5rem;
-  border: 2px solid #27374d;
-  border-radius: .375rem;
-  background-color: #8a8a8a;
 }

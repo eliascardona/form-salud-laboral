@@ -2,13 +2,18 @@
   width: 84%;
   justify-self: center;
   padding: 1rem 2rem;
-  border-radius: 10px;
-  box-shadow: rgba(10, 10, 10, 0.3) 0 2px 5px 0;
+  border-radius: .375rem;
+  box-shadow: rgba(10, 10, 10, 0.3) 0 3px 3px 0;
 }
 
-.grid1 {
+.static-fields-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: .675rem;
+}
+
+.selects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 10px;
+  gap: .675rem;
 }

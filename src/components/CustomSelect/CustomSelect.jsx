@@ -1,4 +1,3 @@
-import PropTypes from "prop-types"
 import "./CustomSelect.css"
 
 export default function CustomSelect({ pregunta, preguntaInputName, opcionesArray = [] }) {
@@ -9,12 +8,23 @@ export default function CustomSelect({ pregunta, preguntaInputName, opcionesArra
         pregunta.toLowerCase().includes("fecha") ? (
           <input
             type="date"
-            name="fecha"
+            name={preguntaInputName}
           />
         ) : pregunta.toLowerCase().includes("edad") ? (
           <input
             type="number"
-            name="edad"
+            name={preguntaInputName}
+            min="0"
+            max="100"
+            placeholder="Ingresa tu edad"
+          />
+        ) : (
+          pregunta.toLowerCase().includes("cm") || pregunta.toLowerCase().includes("kg") ||
+          pregunta.toLowerCase().includes("IMC") || pregunta.toLowerCase().includes("mmHg")
+        ) ? (
+          <input
+            type="number"
+            name={preguntaInputName}
             min="0"
             max="100"
             placeholder="Ingresa tu edad"
@@ -22,8 +32,8 @@ export default function CustomSelect({ pregunta, preguntaInputName, opcionesArra
         ) : (
           <input
             type="text"
-            name={`${preguntaInputName.toLowerCase()}`}
-            placeholder={`Ingresa ${preguntaInputName.toLowerCase()}`}
+            name={preguntaInputName}
+            placeholder={`Ingresa ${pregunta.placeholder}`}
           />
         )
       ) : (
@@ -38,14 +48,4 @@ export default function CustomSelect({ pregunta, preguntaInputName, opcionesArra
       )}
     </div>
   )
-}
-
-CustomSelect.propTypes = {
-  pregunta: PropTypes.string.isRequired,
-  preguntaInputName: PropTypes.string.isRequired,
-  opcionesArray: PropTypes.arrayOf(
-    PropTypes.shape({
-      valor: PropTypes.string.isRequired,
-    }),
-  ),
 }

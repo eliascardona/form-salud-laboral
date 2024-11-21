@@ -1,4 +1,4 @@
-export const EstadoSisSaludPreguntasArray = [
+const EstadoSisSaludPreguntasArray = [
   {
     pregunta: "1. ¿Le zumban los oídos?",
     preguntaInputName: "situacionsalud1",
@@ -45,7 +45,7 @@ export const EstadoSisSaludPreguntasArray = [
     opciones: [{ valor: "Sí" }, { valor: "No" }],
   },
   {
-    pregunta: "8. ¿Ha tenido lagañas constantes o supuración en los ojos?",
+    pregunta: "8. ¿Ha tenido lagañas defaultantes o supuración en los ojos?",
     preguntaInputName: "situacionsalud8",
     opciones: [{ valor: "Sí" }, { valor: "No" }],
   },
@@ -175,9 +175,10 @@ export const EstadoSisSaludPreguntasArray = [
     opciones: [{ valor: "Sí" }, { valor: "No" }],
   },
   {
-    pregunta: "¿Ha padecido en el último año alguna lesión en alguna de las siguientes partes del cuerpo que le dificulte o impida trabajar?",
-    preguntaInputName: "situacionsalud34",
-    opciones: [],
+    pregunta: "Indique si ha padecido alguna lesión en las partes del cuerpo mencionadas debajo (último año)",
+    // preguntaInputName: "situacionsalud34",
+    // placeholder: "parte del cuerpo",
+    // opciones: [],
   },
   {
     pregunta: "34. Cuello:",
@@ -224,6 +225,11 @@ export const EstadoSisSaludPreguntasArray = [
     preguntaInputName: "situacionsalud43",
     opciones: [{ valor: "Sí" }, { valor: "No" }],
   },
-  { pregunta: "¿Cuál?:",
-    preguntaInputName: "situacionsalud44", opciones: [], tipo: "texto" },
+  {
+    pregunta: "¿Cuál?:",
+    preguntaInputName: "situacionsalud44",
+    opciones: [],
+  },
 ]
+
+export default EstadoSisSaludPreguntasArray

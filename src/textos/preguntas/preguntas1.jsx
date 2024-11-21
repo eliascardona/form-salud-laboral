@@ -1,4 +1,4 @@
-export const PreguntasArray = [
+const PreguntasArray = [
   {
     pregunta: "Sexo:",
     preguntaInputName: "sexo",
@@ -29,7 +29,9 @@ export const PreguntasArray = [
   {
     pregunta: "Folio:",
     preguntaInputName: "folio",
+    placeholder: "folio",
     opciones: [],
-    tipo: "texto"
   },
 ]
+
+export default PreguntasArray

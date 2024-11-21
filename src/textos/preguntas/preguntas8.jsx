@@ -1,4 +1,4 @@
-export const MantenimientoAlimentosPreguntasArray = [
+const MantenimientoAlimentosPreguntasArray = [
   {
     pregunta: "¿En su área de trabajo cuenta con servicio de comedor? ",
     preguntaInputName: "trabajoalimento1",
@@ -20,3 +20,5 @@ export const MantenimientoAlimentosPreguntasArray = [
     opciones: [{ valor: "Si " }, { valor: "No " }],
   },
 ]
+
+export default MantenimientoAlimentosPreguntasArray

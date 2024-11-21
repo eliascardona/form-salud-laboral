@@ -1,4 +1,4 @@
-export const AreaTrabajoPreguntasArray = [
+const AreaTrabajoPreguntasArray = [
   {
     pregunta: "1. Le gustaría que sus hijos trabajaran en lo mismo que usted:",
     preguntaInputName: "actividadLaboral1",
@@ -88,3 +88,5 @@ export const AreaTrabajoPreguntasArray = [
     ],
   },
 ]
+
+export default AreaTrabajoPreguntasArray

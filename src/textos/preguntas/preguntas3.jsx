@@ -1,4 +1,4 @@
-export const FactoresSistemaPreguntasArray = [
+const FactoresSistemaPreguntasArray = [
   {
     pregunta: "Rol que ocupa en la familia: ",
     preguntaInputName: "fam11",
@@ -27,3 +27,5 @@ export const FactoresSistemaPreguntasArray = [
     opciones: [{ valor: "Buena" }, { valor: "Regular" }, { valor: "Mala" }],
   },
 ]
+
+export default FactoresSistemaPreguntasArray

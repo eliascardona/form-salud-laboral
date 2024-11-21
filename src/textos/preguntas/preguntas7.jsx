@@ -1,52 +1,50 @@
-export const SistemaCardiovascularPreguntasArray = [
+const SistemaCardiovascularPreguntasArray = [
   {
     pregunta: "Peso (kg):",
     preguntaInputName: "cardio1",
+    placeholder: "peso",
     opciones: [],
-    tipo: "texto"
   },
   {
     pregunta: "Talla (cm):",
     preguntaInputName: "cardio2",
+    placeholder: "talla",
     opciones: [],
-    tipo: "texto"
   },
   {
     pregunta: "TA 1er. toma (mmHg):",
     preguntaInputName: "cardio3",
+    placeholder: "TA-1",
     opciones: [],
-    tipo: "texto"
   },
   {
     pregunta: "TA 2da. toma (mmHg):",
     preguntaInputName: "cardio4",
+    placeholder: "TA-2",
     opciones: [],
-    tipo: "texto"
   },
   {
     pregunta: "IMC:",
     preguntaInputName: "cardio5",
+    placeholder: "imc",
     opciones: [],
-    tipo: "texto"
   },
   {
     pregunta: "TA promedio (mmHg):",
     preguntaInputName: "cardio6",
+    placeholder: "TA-prom",
     opciones: [],
-    tipo: "texto"
   },
   {
     pregunta: "Clasificación:",
     preguntaInputName: "cardio7",
     opciones: [
-      "Normal",
-      "Prehipertensión",
-      "Hipertensión etapa 1",
-      "Hipertensión etapa 2",
+      {valor: "normal"},
+      {valor: "Prehipertensión"},
+      {valor: "Hipertensión etapa 1"},
+      {valor: "Hipertensión etapa 2"},
     ],
-    tipo: "selección",
-  }, // Selección
-
+  },
   {
     pregunta: (
       <>
@@ -102,3 +100,5 @@ export const SistemaCardiovascularPreguntasArray = [
     opciones: [{ valor: "Si " }, { valor: "No " }],
   },
 ]
+
+export default SistemaCardiovascularPreguntasArray

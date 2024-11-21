@@ -1,4 +1,4 @@
-export const PrevencionPeligrosPreguntasArray = [
+const PrevencionPeligrosPreguntasArray = [
   {
     pregunta: (
       <>
@@ -119,3 +119,5 @@ export const PrevencionPeligrosPreguntasArray = [
     ],
   },
 ]
+
+export default PrevencionPeligrosPreguntasArray

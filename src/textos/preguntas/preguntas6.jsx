@@ -1,4 +1,4 @@
-export const RequisitosAutoCuidadoPreguntasArray = [
+const RequisitosAutoCuidadoPreguntasArray = [
   {
     pregunta: "1) ¿Cuántos cigarrillos fuma usted al día? (6=31 o mas, 5=21-30, 4=11-20, 3=menos de 10)",
     preguntaInputName: "autocuidado1",
@@ -43,3 +43,5 @@ export const RequisitosAutoCuidadoPreguntasArray = [
     opciones: [{ valor: "1=Si " }, { valor: "0=No " }],
   },
 ]
+
+export default RequisitosAutoCuidadoPreguntasArray

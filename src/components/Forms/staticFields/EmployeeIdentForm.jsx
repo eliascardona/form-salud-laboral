@@ -1,21 +1,22 @@
+import './EmployeeIdentForm.css'
+
 function EmployeeInput({ labelv, namev, placeholderv }) {
   return (
-    <div className="marginBottom">
+    <>
       <label className="labelStyle">{labelv}</label>
-      <input
-        className="inputStyle"
+      <input 
         type="text"
         name={namev}
         placeholder={placeholderv}
       />
-    </div>
+    </>
   )
 }
 
 export default function EmployeeIdentForm() {
   return (
     <>
-      <div className="fullWidth">
+      <div className="oneColumn">
         <EmployeeInput
           labelv={"Nombre(s) del empleado"}
           namev={"nombre"}

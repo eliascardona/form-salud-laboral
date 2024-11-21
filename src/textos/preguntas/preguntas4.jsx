@@ -1,4 +1,4 @@
-export const FactoresSocioEcoPreguntasArray = [
+const FactoresSocioEcoPreguntasArray = [
   {
     pregunta: "1. Área o departamento donde trabaja:  ",
     preguntaInputName: "socioeconomico1",
@@ -52,3 +52,5 @@ export const FactoresSocioEcoPreguntasArray = [
     opciones: [{ valor: "confianza" }, { valor: "sindicalizado" }],
   },
 ]
+
+export default FactoresSocioEcoPreguntasArray

@@ -1,4 +1,4 @@
-export const PromocionHumanoPreguntasArray = [
+const PromocionHumanoPreguntasArray = [
   {
     pregunta: (
       <>
@@ -263,3 +263,5 @@ export const PromocionHumanoPreguntasArray = [
     opciones: [{ valor: "Sí" }, { valor: "No" }],
   },
 ]
+
+export default PromocionHumanoPreguntasArray

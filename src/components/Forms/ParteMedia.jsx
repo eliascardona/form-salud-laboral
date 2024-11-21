@@ -1,42 +1,27 @@
 import { useEffect } from "react"
-import { SistemaCardiovascularPreguntasArray } from "../../textos/preguntas7"
 import CustomSelect from "../CustomSelect/CustomSelect"
+import { useFormStore } from './(zustand)/formStore'
 import "./styles/forms.css"
 
-import { useFormStore } from './(zustand)/formStore'
-
-const Parte7 = ({ step, setStep, payload }) => {
-
-  const { setInputValue } = useFormStore()
+export default function ParteMedia({ surveyTemplate=[], sectionTitle, step, setStep }) {
+  const inputValue = useFormStore((state) => state.inputValue)
+  const setInputValue = useFormStore((state) => state.setInputValue)
 
   const handleUpdate = (evt) => {
     evt.preventDefault()
-    const temp = {
-      nombre: evt.target.nombre.value,
-      apellidoMaterno: evt.target.apellidoMaterno.value,
-      apellidoPaterno: evt.target.apellidoPaterno.value,
-      edad: evt.target.edad.value,
-      empresa: {
-        id: evt.target.ide.value,
-      },
-      sexo: evt.target.sexo.value,
-      edocivil: evt.target.edocivil.value,
-      escolaridad: evt.target.escolaridad.value,
-      folio: evt.target.folio.value,
-    }
-    setInputValue((prev) => ({
-      ...prev,
-      temp
-    }))
+    const formData = new FormData(evt.target)
+    const inputValue2 = Object.fromEntries(formData)
+    setInputValue({ ...inputValue, ...inputValue2 })
   }
-  useEffect(() => {
-    console.log('informacion acumulada hasta ahora')
-    console.log(payload)
-  }, [payload])
 
+  useEffect(() => {
+    console.log(inputValue)
+  }, [inputValue])
+
+  
   return (
     <div className="form-container">
-      <h3>Sistema Cardiovascular</h3>
+      <h3>{sectionTitle}</h3>
       <form
         id="form2"
         className="formStyle"
@@ -45,8 +30,8 @@ const Parte7 = ({ step, setStep, payload }) => {
           setStep(step + 1)
         }}
       >
-        <div id="arreglo">
-          {SistemaCardiovascularPreguntasArray.map((pregunta, i) => (
+        <div className="selects-grid" id={`opcion-multiple-parte${step}`}>
+          {surveyTemplate.map((pregunta, i) => (
             <CustomSelect
               key={i}
               pregunta={pregunta.pregunta}
@@ -67,11 +52,8 @@ const Parte7 = ({ step, setStep, payload }) => {
             {"atras"}
           </button>
           <button
-            type="button"
+            type="submit"
             className="button"
-            onClick={(e) => {
-              setStep(step + 1)
-            }}
           >
             {"siguiente"}
           </button>
@@ -80,5 +62,3 @@ const Parte7 = ({ step, setStep, payload }) => {
     </div>
   )
 }
-
-export default Parte7

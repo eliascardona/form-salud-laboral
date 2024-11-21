@@ -1,4 +1,4 @@
-export const AuditivoOcularPreguntasArray = [
+const AuditivoOcularPreguntasArray = [
   {
     pregunta: (
       <>
@@ -13,8 +13,8 @@ export const AuditivoOcularPreguntasArray = [
   {
     pregunta: "¿Cuál?",
     preguntaInputName: "auditivoocular2",
+    placeholder: "el nombre del problema auditivo",
     opciones: [],
-    tipo: "texto"
   },
   {
     pregunta: "Su equipo de protección personal está adaptado a sus necesidades auditivas o visuales:",
@@ -52,3 +52,5 @@ export const AuditivoOcularPreguntasArray = [
     opciones: [{ valor: "Especificar fecha" }],
   },
 ]
+
+export default AuditivoOcularPreguntasArray
