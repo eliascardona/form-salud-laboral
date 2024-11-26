@@ -1,8 +1,8 @@
+import { useEffect } from 'react'
 import ParteInicial from '../ParteInicial'
 import ParteMedia from '../ParteMedia'
 import ParteFinal from '../ParteFinal'
 import DefaultStep from './DefaultStep'
-
 import {
   Preguntas1,
   Preguntas2,
@@ -18,6 +18,7 @@ import {
   Preguntas12,
   Preguntas13
 } from '../../../textos/preguntas'
+
 
 export default function FormSteps({ step, setStep }) {
   const Final_Survey_Templates = [
@@ -35,6 +36,10 @@ export default function FormSteps({ step, setStep }) {
     {jsx: Preguntas12},
     {jsx: Preguntas13},
   ]
+
+  useEffect(() => {
+    console.log('step from props', step)
+  }, [step])
 
   return (
     <>

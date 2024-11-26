@@ -2,3 +2,9 @@
   width: 92%;
   justify-self: center;
 }
+
+@media (max-width: 869px) {
+  .g1Item {
+    width: 100%;
+  }
+}

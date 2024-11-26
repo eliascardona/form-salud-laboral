@@ -1,23 +1,30 @@
-.Navbar__activator {
-  position: fixed;
-  left: 0;
-  top: 9%;
-  z-index: 10;
-  display: grid;
-  border: 1px solid #000000;
-  width: 4rem;
-  height: 8rem;
-  grid-template-rows: 50% 50%;
-}
-
 .Navbar__activator_item1 {
   border: #000;
 }
 
 .Navbar__activator_item2 {
-  color: #000;
-  background-color: #fefefe;
-  box-shadow: rgba(10, 10, 10, 0.3) 0 0 1px 0;
+  padding: 0.5rem;
+  margin-right: auto;
+  font-size: 1.1em;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+.Navbar__activator_item2 {
+  color: var(--link-color);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s ease;
+}
+.Navbar__activator_item2:not(.active):hover {
+  background-color: var(--link-hover-bg);
+  color: white;
+}
+
+.Navbar__activator_item2:focus {
+  outline: 2px solid var(--link-hover-bg);
+  outline-offset: 2px;
 }
 
 .Navbar__global_container {
@@ -286,40 +293,40 @@
   transition: max-height 0.3s ease-out;
 }
 .Navbar__btn-open {
-	position: fixed; /* Asegura que esté siempre visible */
-	top: 20px;
-	left: 21%;
-	background-color: transparent;
-	border: none;
-	color: #000000;
-	cursor: pointer;
-	font-size: 1.5em;
-	z-index: 5; /* Encima del overlay y sidebar */
-	padding: 0;
-	width: 40px;
-	height: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: all 0.3s ease;
+  position: fixed; /* Asegura que esté siempre visible */
+  top: 20px;
+  left: 21%;
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  font-size: 1.5em;
+  z-index: 5; /* Encima del overlay y sidebar */
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 .Navbar__btn-close {
-	position: fixed; /* Asegura que esté siempre visible */
-	top: 20px;
-	left: 15px;
-	background-color: transparent;
-	border: none;
-	color: #000000;
-	cursor: pointer;
-	font-size: 1.5em;
-	z-index: 5; /* Encima del overlay y sidebar */
-	padding: 0;
-	width: 40px;
-	height: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: all 0.3s ease;
+  position: fixed; /* Asegura que esté siempre visible */
+  top: 20px;
+  left: 15px;
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  font-size: 1.5em;
+  z-index: 5; /* Encima del overlay y sidebar */
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
 .toggle-btn:hover {
@@ -330,37 +337,36 @@
 .Navbar____nav-closed {
   margin-left: 0%;
 }
-@media screen and (max-width: 1150px){
+@media screen and (max-width: 869px) {
   .Navbar____sidebar {
     width: 28%;
   }
   .Navbar____nav-closed {
     margin-left: 0%;
   }
-    
-.Navbar__btn-open {
-	position: fixed; /* Asegura que esté siempre visible */
-	top: 20px;
-	left: 29%;
-	background-color: transparent;
-	border: none;
-	color: #000000;
-	cursor: pointer;
-	font-size: 1.5em;
-	z-index: 5; /* Encima del overlay y sidebar */
-	padding: 0;
-	width: 40px;
-	height: 40px;
-	display: flex;
-	align-items: right;
-	justify-content: center;
-	transition: all 0.3s ease;
-}
 
+  .Navbar__btn-open {
+    position: fixed; /* Asegura que esté siempre visible */
+    top: 20px;
+    left: 29%;
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 5; /* Encima del overlay y sidebar */
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
 }
 
 /* Responsividad */
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 869px) {
   /* Ajustes para la barra lateral en móviles */
   .Navbar____sidebar {
     width: 40%; /* Ocupar 80% del ancho de la pantalla */
@@ -389,52 +395,52 @@
     left: 15px;
     z-index: 4; /* Encima del overlay y sidebar */
   }
-  
-.Navbar__btn-open {
-	position: fixed; /* Asegura que esté siempre visible */
-	top: 20px;
-	left: 41%;
-	background-color: transparent;
-	border: none;
-	color: #000000;
-	cursor: pointer;
-	font-size: 1.5em;
-	z-index: 5; /* Encima del overlay y sidebar */
-	padding: 0;
-	width: 40px;
-	height: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: right;
-	transition: all 0.3s ease;
-}
-.Navbar__btn-close {
-	position: fixed; /* Asegura que esté siempre visible */
-	top: 20px;
-	left: 15px;
-	background-color: transparent;
-	border: none;
-	color: #000000;
-	cursor: pointer;
-	font-size: 1.5em;
-	z-index: 5; /* Encima del overlay y sidebar */
-	padding: 0;
-	width: 40px;
-	height: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: all 0.3s ease;
-}
 
-.Navbar____username {
-  font-size: 1em;
-  color: #000000;
-}
+  .Navbar__btn-open {
+    position: fixed; /* Asegura que esté siempre visible */
+    top: 20px;
+    left: 41%;
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 5; /* Encima del overlay y sidebar */
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    transition: all 0.3s ease;
+  }
+  .Navbar__btn-close {
+    position: fixed; /* Asegura que esté siempre visible */
+    top: 20px;
+    left: 15px;
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 5; /* Encima del overlay y sidebar */
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .Navbar____username {
+    font-size: 1em;
+    color: #000000;
+  }
 }
 
 /* Responsividad */
-@media screen and (max-width: 635px) {
+@media screen and (max-width: 869px) {
   /* Ajustes para la barra lateral en móviles */
   .Navbar____sidebar {
     width: 55%; /* Ocupar 80% del ancho de la pantalla */
@@ -463,54 +469,52 @@
     left: 15px;
     z-index: 4; /* Encima del overlay y sidebar */
   }
-  
-.Navbar__btn-open {
-	position: fixed; /* Asegura que esté siempre visible */
-	top: 20px;
-	left: 56%;
-	background-color: transparent;
-	border: none;
-	color: #000000;
-	cursor: pointer;
-	font-size: 1.5em;
-	z-index: 5; /* Encima del overlay y sidebar */
-	padding: 0;
-	width: 40px;
-	height: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: right;
-	transition: all 0.3s ease;
-}
-.Navbar__btn-close {
-	position: fixed; /* Asegura que esté siempre visible */
-	top: 20px;
-	left: 15px;
-	background-color: transparent;
-	border: none;
-	color: #000000;
-	cursor: pointer;
-	font-size: 1.5em;
-	z-index: 5; /* Encima del overlay y sidebar */
-	padding: 0;
-	width: 40px;
-	height: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: all 0.3s ease;
-}
 
-.Navbar____username {
-  font-size: 1em;
-  color: #000000;
-}
-}
+  .Navbar__btn-open {
+    position: fixed; /* Asegura que esté siempre visible */
+    top: 20px;
+    left: 56%;
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 5; /* Encima del overlay y sidebar */
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    transition: all 0.3s ease;
+  }
+  .Navbar__btn-close {
+    position: fixed; /* Asegura que esté siempre visible */
+    top: 20px;
+    left: 15px;
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 5; /* Encima del overlay y sidebar */
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
 
+  .Navbar____username {
+    font-size: 1em;
+    color: #000000;
+  }
+}
 
 /* Ajustes para pantallas extremadamente pequeñas */
-@media screen and (max-width: 480px) {
-
+@media screen and (max-width: 869px) {
   .Navbar____user-menu-btn {
     margin-left: auto;
   }
@@ -518,41 +522,41 @@
   .Navbar__sidebar {
     width: 74%; /* Ocupar 80% del ancho de la pantalla */
   }
-  
-.Navbar__btn-open{
-	position: fixed; /* Asegura que esté siempre visible */
-	top: 20px;
-	left: 75%;
-	background-color: transparent;
-	border: none;
-	color: #000000;
-	cursor: pointer;
-	font-size: 1.5em;
-	z-index: 5; /* Encima del overlay y sidebar */
-	padding: 0;
-	width: 40px;
-	height: 40px;
-	display: flex;
-	align-items: right;
-	justify-content: center;
-	transition: all 0.3s ease;
-}
-.Navbar__btn-close{
-	position: fixed; /* Asegura que esté siempre visible */
-	top: 20px;
-	left: 15px;
-	background-color: transparent;
-	border: none;
-	color: #000000;
-	cursor: pointer;
-	font-size: 1.5em;
-	z-index: 5; /* Encima del overlay y sidebar */
-	padding: 0;
-	width: 40px;
-	height: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: all 0.3s ease;
-}
+
+  .Navbar__btn-open {
+    position: fixed; /* Asegura que esté siempre visible */
+    top: 20px;
+    left: 75%;
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 5; /* Encima del overlay y sidebar */
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  .Navbar__btn-close {
+    position: fixed; /* Asegura que esté siempre visible */
+    top: 20px;
+    left: 15px;
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 5; /* Encima del overlay y sidebar */
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
 }

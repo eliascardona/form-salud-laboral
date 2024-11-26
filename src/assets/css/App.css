@@ -5,3 +5,10 @@
   padding-top: 2rem;
   gap: 2rem;
 }
+
+@media (max-width: 869px) {
+  .Home__grid {
+    padding-top: 1rem;
+    gap: 1rem;
+  }
+}

@@ -1,16 +1,12 @@
-import './EmployeeIdentForm.css'
+import "./EmployeeIdentForm.css";
 
 function EmployeeInput({ labelv, namev, placeholderv }) {
   return (
-    <>
+    <div>
       <label className="labelStyle">{labelv}</label>
-      <input 
-        type="text"
-        name={namev}
-        placeholder={placeholderv}
-      />
-    </>
-  )
+      <input type="text" name={namev} placeholder={placeholderv} />
+    </div>
+  );
 }
 
 export default function EmployeeIdentForm() {
@@ -50,5 +46,5 @@ export default function EmployeeIdentForm() {
         />
       </div>
     </>
-  )
+  );
 }
