@@ -5,8 +5,8 @@ import MainHeader from "../components/ui/headers/MainHeader";
 import "../assets/css/App.css";
 
 export default function App() {
-  const [step, setStep] = useState(1);
-  const pageIndicatorArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+  const [step, setStep] = useState(0);
+  const pageIndicatorArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
   return (
     <>

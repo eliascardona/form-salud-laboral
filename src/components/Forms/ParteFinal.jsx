@@ -3,6 +3,19 @@ import CustomSelect from "../CustomSelect/CustomSelect"
 import { useFormStore } from './(zustand)/formStore'
 import "./styles/forms.css"
 
+const Accordion = ({ title, children }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="accordion">
+      <div className="accordion-header" onClick={() => setIsOpen(!isOpen)}>
+        {title}
+      </div>
+      {isOpen && <div className="accordion-content">{children}</div>}
+    </div>
+  );
+};
+
 
 export default function ParteFinal({ surveyTemplate = [], step, setStep }) {
   const inputValue = useFormStore((state) => state.inputValue)
@@ -22,7 +35,7 @@ export default function ParteFinal({ surveyTemplate = [], step, setStep }) {
 
   const submitAllFormSections = async (evt) => {
     evt.preventDefault()
-    if(inputValue != null) {
+    if (inputValue != null) {
       const r = await fetch('http://localhost:8082/forms', {
         method: 'POST',
         headers: {
@@ -53,14 +66,30 @@ export default function ParteFinal({ surveyTemplate = [], step, setStep }) {
       >
         <h3>Promoción del Funcionamiento Humano</h3>
         <div className="selects-grid" id="opcion-multiple-parteFinal">
-          {surveyTemplate.map((pregunta, i) => (
-            <CustomSelect
-              key={i}
-              pregunta={pregunta.pregunta}
-              preguntaInputName={pregunta.preguntaInputName}
-              opcionesArray={pregunta.opciones}
-            />
-          ))}
+          {surveyTemplate
+            .reduce((rows, pregunta, index) => {
+              if (index % 3 === 0) rows.push([]);
+              rows[rows.length - 1].push(pregunta);
+              return rows;
+            }, [])
+            .map((row, rowIndex) => (
+              <Accordion
+                key={rowIndex}
+                title={`Promoción del Funcionamiento Humano, seccion ${rowIndex + 1}`}
+              >
+                <div className="grid-two-columns">
+                  {row.map((pregunta, i) => (
+                    <CustomSelect
+                      key={i}
+                      pregunta={pregunta.pregunta}
+                      preguntaInputName={pregunta.preguntaInputName}
+                      opcionesArray={pregunta.opciones}
+                      tipo={pregunta.tipo}
+                    />
+                  ))}
+                </div>
+              </Accordion>
+            ))}
         </div>
         <div className="button-container-padd">
           <button

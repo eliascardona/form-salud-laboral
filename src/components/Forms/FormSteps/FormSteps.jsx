@@ -44,21 +44,21 @@ export default function FormSteps({ step, setStep }) {
   return (
     <>
       {
-        step === 1 ? (
+        step === 0 ? (
           <ParteInicial 
             step={step}
             setStep={setStep}
           />
-        ) : (step > 2 || step < 13) ? (
+        ) : (step > 0 && step < 12) ? (
           <ParteMedia 
-            surveyTemplate={Final_Survey_Templates[step-1].jsx}
+            surveyTemplate={Final_Survey_Templates[step].jsx}
             sectionTitle={"Titulo de la sección"}
             step={step}
             setStep={setStep}
           />
-        ) : step === 13 ? (
+        ) : step === 12 ? (
           <ParteFinal 
-            surveyTemplate={Final_Survey_Templates[13].jsx}
+            surveyTemplate={Final_Survey_Templates[step].jsx}
             step={step}
             setStep={setStep}
           />

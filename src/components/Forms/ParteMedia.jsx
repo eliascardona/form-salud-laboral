@@ -57,7 +57,7 @@ export default function ParteMedia({
             .map((row, rowIndex) => (
               <Accordion
                 key={rowIndex}
-                title={`${sectionTitle} seccion ${rowIndex + 1}`}
+                title={`${sectionTitle}, seccion ${rowIndex + 1}`}
               >
                 <div className="grid-two-columns">
                   {row.map((pregunta, i) => (
