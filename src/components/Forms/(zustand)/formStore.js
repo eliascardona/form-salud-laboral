@@ -7,12 +7,11 @@ const useFormStore = create((set) => ({
     }
 }))
 
-const unsubscribe = useFormStore.subscribe(
-    (state) => state.inputValue,
-    (newInputValue) => {
-        console.log('new state', newInputValue)
+const useRequestBodyStore = create((set) => ({
+    requestBody: {},
+    setRequestBody: (newValue) => {
+        set({ requestBody: newValue })
     }
-)
-unsubscribe()
+}))
 
-export { useFormStore }
+export { useFormStore, useRequestBodyStore }

@@ -176,7 +176,7 @@ const EstadoSisSaludPreguntasArray = [
   },
   {
     pregunta: "Indique si ha padecido alguna lesión en las partes del cuerpo mencionadas debajo (último año)",
-    // preguntaInputName: "situacionsalud34",
+    preguntaInputName: "Indique si ha padecido alguna lesión",
     // placeholder: "parte del cuerpo",
     // opciones: [],
   },

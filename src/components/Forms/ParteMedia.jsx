@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import CustomSelect from "../CustomSelect/CustomSelect";
-import { useFormStore } from "./(zustand)/formStore";
+import { useFormStore, useRequestBodyStore } from "./(zustand)/formStore";
+import { fillRequestBody } from '../../lib/dataHandling/serverRequestGPT'
 import "./styles/forms.css";
 
 const Accordion = ({ title, children }) => {
@@ -19,22 +20,37 @@ const Accordion = ({ title, children }) => {
 export default function ParteMedia({
   surveyTemplate = [],
   sectionTitle,
+  sectionId,
+  sectionKey,
   step,
   setStep,
 }) {
   const inputValue = useFormStore((state) => state.inputValue);
   const setInputValue = useFormStore((state) => state.setInputValue);
+  const requestBody = useRequestBodyStore((state) => state.requestBody);
+  const setRequestBody = useRequestBodyStore((state) => state.setRequestBody);
+
+  useEffect(() => {
+    console.log('props sectionId', sectionId)
+    console.log('props sectionKey', sectionKey)
+  }, [sectionId, sectionKey])
 
   const handleUpdate = (evt) => {
     evt.preventDefault();
     const formData = new FormData(evt.target);
-    const inputValue2 = Object.fromEntries(formData);
-    setInputValue({ ...inputValue, ...inputValue2 });
-  };
+    const newInputValues = Object.fromEntries(formData);
+
+    // const totalScore = handleFormResponse(newInputValues);
+    fillRequestBody(sectionId, sectionKey, setRequestBody, requestBody, newInputValues);
+
+
+    setInputValue({ ...inputValue, ...newInputValues });
+  }
 
   useEffect(() => {
-    console.log(inputValue);
-  }, [inputValue]);
+    // console.log(inputValue)
+    console.log(requestBody)
+  }, [inputValue, requestBody])
 
   return (
     <div className="form-container">
@@ -43,7 +59,7 @@ export default function ParteMedia({
         id="form2"
         className="formStyle"
         onSubmit={(e) => {
-          handleUpdate(e);
+          handleUpdate(e, sectionTitle, sectionKey);
           setStep(step + 1);
         }}
       >

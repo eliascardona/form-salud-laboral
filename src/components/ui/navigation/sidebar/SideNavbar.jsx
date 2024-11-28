@@ -16,7 +16,7 @@ export default function SideNavbar({ isModalOpen, setModalToOpen }) {
           >
             cerrar
           </span>
-          <LogicNavcat />
+          {/* <LogicNavcat /> */}
           <span></span>
         </LogicSidebar>
       )}
