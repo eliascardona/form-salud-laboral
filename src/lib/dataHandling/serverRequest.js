@@ -1,57 +1,40 @@
-import { ATRIBUTOS_DE_ENTIDAD, NOMBRE_SECCION } from "../(ENTITIES_ENUMS)/extenseForm/enum"
+const transformateArray = (arregloOriginal, respuestasObj) => {
+    const nuevoArreglo = arregloOriginal.map((pregunta) => {
+        const respuesta = respuestasObj[pregunta.preguntaInputName]
 
-const fillRequestBody = (sectionId, sectionKey, setRequestBody, previousState) => {
-    switch (sectionId) {
-        case NOMBRE_SECCION.CONDICIONES_LABORALES: {
-            let attributes = ['']
-            let questionTemplate = {}
-            for (let [k, v] of Object.entries(ATRIBUTOS_DE_ENTIDAD[sectionKey])) {
-                questionTemplate = ATRIBUTOS_DE_ENTIDAD[sectionKey]
-                attributes.push(k)
-            }
-            attributes.forEach((attr, i) => {
-                let temp = {
-                    [questionTemplate[attr]]: '',
-                }
-                setRequestBody({
-                    ...previousState,
-                    [NOMBRE_SECCION[sectionId]] : { ...temp }
-                })
-            })
+        return {
+            sectionKey: pregunta['sectionKey'],
+            sectionId: pregunta['sectionId'],
+            enum_matcher_Attr: pregunta['enum_matcher_Attr'],
+            respuesta: respuesta || ""
         }
-        // case NOMBRE_SECCION.FACTORES_FAMILIARES: {
-        // }
-        // case NOMBRE_SECCION.FACTORES_SOCIOCULTURALES: {
-        // }
-        // case NOMBRE_SECCION.SALUD_GENERAL: {
-        // }
-        // case NOMBRE_SECCION.AUTOCUIDADO_UNIVERSAL: {
-        // }
-        // case NOMBRE_SECCION.SALUD_CARDIOVASCULAR: {
-        // }
-        // case NOMBRE_SECCION.NUTRICION: {
-        // }
-        // case NOMBRE_SECCION.ESTILO_DE_VIDA: {
-        // }
-        // case NOMBRE_SECCION.SALUD_AUDIOVISUAL: {
-        // }
-        // case NOMBRE_SECCION.PREVENCION_DE_RIESGOS: {
-        // }
-        // case NOMBRE_SECCION.FACTORES_AMBIENTALES: {
-        // }
-        // case NOMBRE_SECCION.PROMOCION_HUMANA: {
-        // }
-        default:
-            return 'Se está intentado procesar una sección no valida'
-    }
+    })
+    return nuevoArreglo
 }
 
-function scoreCalculation(selectedOptionFromInput) {
-    let cont = 0
-    if (selectedOptionFromInput === 'Sí') {
-        cont = 1
+const calculateScores = (transformedArray, enumAttributes, sectionKeyParam) => {
+    const actualKey = `${sectionKeyParam}`;
+    const resultado = {
+        [actualKey]: {}
+    };
+    const section = enumAttributes[sectionKeyParam];
+
+    for (const key in section) {
+        if (key !== "sectionId") {
+            resultado[actualKey][key] = 0;
+        }
     }
-    return cont
+    resultado[actualKey]["sectionId"] = section.sectionId;
+
+    transformedArray.forEach((item) => {
+        if (item.sectionId === section.sectionId) {
+            if (resultado[actualKey].hasOwnProperty(item.enum_matcher_Attr) && item.respuesta === "Sí") {
+                resultado[actualKey][item.enum_matcher_Attr] += 1;
+            }
+        }
+    });
+    return resultado;
 }
 
-export { fillRequestBody, scoreCalculation }
+
+export { calculateScores, transformateArray }

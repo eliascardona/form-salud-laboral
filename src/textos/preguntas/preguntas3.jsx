@@ -9,6 +9,10 @@ const FactoresSistemaPreguntasArray = [
       { valor: "Esposa/o" },
       { valor: "Otro" },
     ],
+    tipoPregunta: "positivo",
+    sectionKey: "section3",
+    sectionId: "factores_familiares",
+    enum_matcher_Attr: "jobSatisfaction",
   },
   {
     pregunta: "¿Cuántos hijos tiene?  ",
@@ -20,12 +24,20 @@ const FactoresSistemaPreguntasArray = [
       { valor: "3" },
       { valor: "4 o mas" },
     ],
+    tipoPregunta: "positivo",
+    sectionKey: "section3",
+    sectionId: "factores_familiares",
+    enum_matcher_Attr: "jobSatisfaction",
   },
   {
     pregunta: "Relación con la familia:  ",
     preguntaInputName: "fam13",
     opciones: [{ valor: "Buena" }, { valor: "Regular" }, { valor: "Mala" }],
+    tipoPregunta: "positivo",
+    sectionKey: "section3",
+    sectionId: "factores_familiares",
+    enum_matcher_Attr: "jobSatisfaction",
   },
-]
+];
 
-export default FactoresSistemaPreguntasArray
+export default FactoresSistemaPreguntasArray;

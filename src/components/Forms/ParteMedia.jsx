@@ -1,21 +1,11 @@
-import { useState, useEffect } from "react";
-import CustomSelect from "../CustomSelect/CustomSelect";
-import { useFormStore, useRequestBodyStore } from "./(zustand)/formStore";
-import { fillRequestBody } from '../../lib/dataHandling/serverRequestGPT'
-import "./styles/forms.css";
+import { useState, useEffect } from "react"
+import CustomSelect from "../CustomSelect/CustomSelect"
+import { useFormStore, useRequestBodyStore } from '../../lib/(zustand)/formStore'
+import { calculateScores, transformateArray } from "../../lib/dataHandling/serverRequest"
+import { ATRIBUTOS_DE_ENTIDAD } from "../../lib/(ENTITIES_ENUMS)/extenseForm/enum"
+import Accordion from "../ui/commonUI/accordion/Accordion"
+import "./styles/DynamicForms.css"
 
-const Accordion = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className="accordion">
-      <div className="accordion-header" onClick={() => setIsOpen(!isOpen)}>
-        {title}
-      </div>
-      {isOpen && <div className="accordion-content">{children}</div>}
-    </div>
-  );
-};
 
 export default function ParteMedia({
   surveyTemplate = [],
@@ -30,27 +20,48 @@ export default function ParteMedia({
   const requestBody = useRequestBodyStore((state) => state.requestBody);
   const setRequestBody = useRequestBodyStore((state) => state.setRequestBody);
 
+  const [originalArrayTemplate, setOriginalArrayTemplate] = useState([])
+
   useEffect(() => {
-    console.log('props sectionId', sectionId)
-    console.log('props sectionKey', sectionKey)
-  }, [sectionId, sectionKey])
+    function copyArray() {
+      setOriginalArrayTemplate(prev => ([
+        ...surveyTemplate
+      ]))
+    }
+    copyArray()
+  }, [inputValue])
+
+  useEffect(() => {
+    function logging() {
+      console.log('originalTemplate we recieved')
+      console.log(originalArrayTemplate)
+    }
+    logging()
+  }, [originalArrayTemplate])
+
+  const [scoreProperFormat, setScoreProperFormat] = useState({})
 
   const handleUpdate = (evt) => {
-    evt.preventDefault();
+    evt.preventDefault()
     const formData = new FormData(evt.target);
-    const newInputValues = Object.fromEntries(formData);
+    const newInputValues = Object.fromEntries(formData)
+    setInputValue({ ...inputValue, ...newInputValues })
 
-    // const totalScore = handleFormResponse(newInputValues);
-    fillRequestBody(sectionId, sectionKey, setRequestBody, requestBody, newInputValues);
+    console.log('new input values. this will be the TRANSFORMATION TEMPLATE')
+    console.log(newInputValues)
+    
+    const nuevo = transformateArray(originalArrayTemplate, newInputValues)
 
+    if (nuevo.length > 0) {
+      const result = calculateScores(nuevo, ATRIBUTOS_DE_ENTIDAD, sectionKey)
+      setScoreProperFormat(prev => ({
+        ...result
+      }))
 
-    setInputValue({ ...inputValue, ...newInputValues });
+      setRequestBody({ ...requestBody, ...scoreProperFormat })
+    }
+    console.log('error transformando el formulario')
   }
-
-  useEffect(() => {
-    // console.log(inputValue)
-    console.log(requestBody)
-  }, [inputValue, requestBody])
 
   return (
     <div className="form-container">
@@ -59,14 +70,14 @@ export default function ParteMedia({
         id="form2"
         className="formStyle"
         onSubmit={(e) => {
-          handleUpdate(e, sectionTitle, sectionKey);
+          handleUpdate(e);
           setStep(step + 1);
         }}
       >
         <div className="selects-grid" id={`opcion-multiple-parte${step}`}>
           {surveyTemplate
             .reduce((rows, pregunta, index) => {
-              if (index % 3 === 0) rows.push([]);
+              if (index % 6 === 0) rows.push([]);
               rows[rows.length - 1].push(pregunta);
               return rows;
             }, [])

@@ -15,6 +15,10 @@ const FactoresSocioEcoPreguntasArray = [
       { valor: "Investigación y Desarrollo" },
       { valor: "Otros (especificar)" },
     ],
+    tipoPregunta: "positivo",
+    sectionKey: "section4",
+    sectionId: "factores_socioculturales",
+    enum_matcher_Attr: "jobSatisfaction",
   },
   {
     pregunta: "2. Puesto que ocupa actualmente:  ",
@@ -31,6 +35,10 @@ const FactoresSocioEcoPreguntasArray = [
       { valor: "Administrativo" },
       { valor: "Otros (especificar)" },
     ],
+    tipoPregunta: "positivo",
+    sectionKey: "section4",
+    sectionId: "factores_socioculturales",
+    enum_matcher_Attr: "jobSatisfaction",
   },
   {
     pregunta: "3. Cuánto tiempo lleva en la empresa:  ",
@@ -45,12 +53,20 @@ const FactoresSocioEcoPreguntasArray = [
       { valor: "11 a 20 años" },
       { valor: "mas de 20 años" },
     ],
+    tipoPregunta: "positivo",
+    sectionKey: "section4",
+    sectionId: "factores_socioculturales",
+    enum_matcher_Attr: "jobSatisfaction",
   },
   {
     pregunta: "4. Es trabajador de: confianza ó :  ",
     preguntaInputName: "socioeconomico4",
     opciones: [{ valor: "confianza" }, { valor: "sindicalizado" }],
+    tipoPregunta: "positivo",
+    sectionKey: "section4",
+    sectionId: "factores_socioculturales",
+    enum_matcher_Attr: "jobSatisfaction",
   },
-]
+];
 
-export default FactoresSocioEcoPreguntasArray
+export default FactoresSocioEcoPreguntasArray;

@@ -3,6 +3,10 @@ const PreguntasArray = [
     pregunta: "Sexo:",
     preguntaInputName: "sexo",
     opciones: [{ valor: "Masculino" }, { valor: "Femenino" }],
+    tipoPregunta: "positivo",
+    sectionKey: "section1",
+    sectionId: "condiciones_laborales",
+    enum_matcher_Attr: "jobSatisfaction",
   },
   {
     pregunta: "Estado Civil:",
@@ -13,6 +17,10 @@ const PreguntasArray = [
       { valor: "Divorciado" },
       { valor: "Viudo" },
     ],
+    tipoPregunta: "positivo",
+    sectionKey: "section1",
+    sectionId: "condiciones_laborales",
+    enum_matcher_Attr: "jobSatisfaction",
   },
   {
     pregunta: "Escolaridad:",
@@ -25,13 +33,21 @@ const PreguntasArray = [
       { valor: "Maestría" },
       { valor: "Doctorado" },
     ],
+    tipoPregunta: "positivo",
+    sectionKey: "section1",
+    sectionId: "condiciones_laborales",
+    enum_matcher_Attr: "jobSatisfaction",
   },
   {
     pregunta: "Folio:",
     preguntaInputName: "folio",
     placeholder: "folio",
     opciones: [],
+    tipoPregunta: "positivo",
+    sectionKey: "section1",
+    sectionId: "condiciones_laborales",
+    enum_matcher_Attr: "jobSatisfaction",
   },
-]
+];
 
-export default PreguntasArray
+export default PreguntasArray;

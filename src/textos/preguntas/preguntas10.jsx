@@ -9,27 +9,48 @@ const AuditivoOcularPreguntasArray = [
     ),
     preguntaInputName: "auditivoocular1",
     opciones: [{ valor: "Si " }, { valor: "No " }, { valor: "A veces" }],
+    tipoPregunta: "positivo",
+    sectionKey: "section10",
+    sectionId: "salud_audiovisual",
+    enum_matcher_Attr: "jobSatisfaction",
   },
   {
     pregunta: "¿Cuál?",
     preguntaInputName: "auditivoocular2",
     placeholder: "el nombre del problema auditivo",
     opciones: [],
+    tipoPregunta: "positivo",
+    sectionKey: "section10",
+    sectionId: "salud_audiovisual",
+    enum_matcher_Attr: "jobSatisfaction",
   },
   {
-    pregunta: "Su equipo de protección personal está adaptado a sus necesidades auditivas o visuales:",
+    pregunta:
+      "Su equipo de protección personal está adaptado a sus necesidades auditivas o visuales:",
     preguntaInputName: "auditivoocular3",
     opciones: [{ valor: "Si" }, { valor: "No" }],
+    tipoPregunta: "positivo",
+    sectionKey: "section10",
+    sectionId: "salud_audiovisual",
+    enum_matcher_Attr: "jobSatisfaction",
   },
   {
     pregunta: "¿Necesita apoyo para Escuchar?",
     preguntaInputName: "auditivoocular4",
     opciones: [{ valor: "Si" }, { valor: "No" }],
+    tipoPregunta: "positivo",
+    sectionKey: "section10",
+    sectionId: "salud_audiovisual",
+    enum_matcher_Attr: "jobSatisfaction",
   },
   {
     pregunta: "¿Necesita apoyo para ver?",
     preguntaInputName: "auditivoocular5",
     opciones: [{ valor: "Si" }, { valor: "No" }],
+    tipoPregunta: "positivo",
+    sectionKey: "section10",
+    sectionId: "salud_audiovisual",
+    enum_matcher_Attr: "jobSatisfaction",
   },
   {
     pregunta: "¿Cuál?",
@@ -45,12 +66,20 @@ const AuditivoOcularPreguntasArray = [
       { valor: "Pantallas de Alta Resolución" },
       { valor: "Otros" },
     ],
+    tipoPregunta: "positivo",
+    sectionKey: "section10",
+    sectionId: "salud_audiovisual",
+    enum_matcher_Attr: "jobSatisfaction",
   },
   {
     pregunta: "¿Desde cuándo?",
     preguntaInputName: "auditivoocular7",
     opciones: [{ valor: "Especificar fecha" }],
+    tipoPregunta: "positivo",
+    sectionKey: "section10",
+    sectionId: "salud_audiovisual",
+    enum_matcher_Attr: "jobSatisfaction",
   },
-]
+];
 
-export default AuditivoOcularPreguntasArray
+export default AuditivoOcularPreguntasArray;

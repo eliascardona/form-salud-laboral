@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import CustomSelect from "../CustomSelect/CustomSelect"
-import { useFormStore } from './(zustand)/formStore'
-import "./styles/forms.css"
+import { useFormStore } from '../../lib/(zustand)/formStore'
+import "./styles/DynamicForms.css"
 
 const Accordion = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,9 +28,6 @@ export default function ParteFinal({ surveyTemplate = [], step, setStep }) {
     setInputValue({ ...inputValue2 })
   }
 
-  useEffect(() => {
-    console.log(inputValue)
-  }, [inputValue])
   const [serverResponse, setServerResponse] = useState(null)
 
   const submitAllFormSections = async (evt) => {
@@ -51,7 +48,6 @@ export default function ParteFinal({ surveyTemplate = [], step, setStep }) {
       )
 
     }
-    console.log('algo anda mal')
   }
 
   return (

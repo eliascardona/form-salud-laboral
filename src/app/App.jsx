@@ -1,8 +1,9 @@
 import { useState } from "react";
-import FormSteps from "../components/Forms/FormSteps/FormSteps";
+import FormSteps from "../components/FormSteps/FormSteps";
 import Pagination from "../components/Pagination/Pagination";
 import MainHeader from "../components/ui/headers/MainHeader";
 import "../assets/css/App.css";
+// import Prueba from "./Prueba";
 
 export default function App() {
   const [step, setStep] = useState(0);
@@ -11,6 +12,7 @@ export default function App() {
   return (
     <>
       <MainHeader />
+      {/* <Prueba /> */}
       <div className="Home__grid">
         <>
           <Pagination
@@ -27,5 +29,5 @@ export default function App() {
         </>
       </div>
     </>
-  );
+  )
 }

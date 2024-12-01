@@ -1,4 +1,4 @@
-import "./EmployeeIdentForm.css";
+import "./styles/DatosDeIdentificacion.css"
 
 function EmployeeInput({ labelv, namev, placeholderv }) {
   return (

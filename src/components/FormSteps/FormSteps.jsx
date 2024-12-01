@@ -1,7 +1,6 @@
-import { useEffect } from 'react'
-import ParteInicial from '../ParteInicial'
-import ParteMedia from '../ParteMedia'
-import ParteFinal from '../ParteFinal'
+import ParteInicial from '../Forms/ParteInicial'
+import ParteMedia from '../Forms/ParteMedia'
+import ParteFinal from '../Forms/ParteFinal'
 import DefaultStep from './DefaultStep'
 import {
   Preguntas1,
@@ -17,7 +16,7 @@ import {
   Preguntas11,
   Preguntas12,
   Preguntas13
-} from '../../../textos/preguntas'
+} from '../../textos/preguntas'
 
 
 export default function FormSteps({ step, setStep }) {
@@ -36,10 +35,6 @@ export default function FormSteps({ step, setStep }) {
     {jsx: Preguntas12, title: 'ejemplo 12', sectionId: 'FACTORES_AMBIENTALES', sectionKey: 'section12' },
     {jsx: Preguntas13, title: 'ejemplo 13', sectionId: 'PROMOCION_HUMANA', sectionKey: 'section13' },
   ]
-
-  useEffect(() => {
-    console.log('step from props', step)
-  }, [step])
 
   return (
     <>

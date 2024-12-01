@@ -1,7 +1,7 @@
 import { useEffect } from "react"
-import EmployeeIdentForm from "./staticFields/EmployeeIdentForm"
-import { useFormStore } from './(zustand)/formStore'
-import "./styles/forms.css"
+import EmployeeIdentForm from "./DatosDeIdentificacion"
+import { useFormStore } from '../../lib/(zustand)/formStore'
+import "./styles/DynamicForms.css"
 
 
 export default function ParteInicial({ step, setStep }) {
@@ -14,10 +14,6 @@ export default function ParteInicial({ step, setStep }) {
     const inputValue2 = Object.fromEntries(formData)
     setInputValue({ ...inputValue2 })
   }
-
-  useEffect(() => {
-    console.log(inputValue)
-  }, [inputValue])
 
   
   return (
