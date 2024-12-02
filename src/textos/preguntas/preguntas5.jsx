@@ -6,7 +6,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "healthStatus",
   },
   {
     pregunta: "2. ¿Durante el último año ha notado que oye menos?",
@@ -15,7 +15,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "healthStatus",
   },
   {
     pregunta:
@@ -25,7 +25,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "healthStatus",
   },
   {
     pregunta:
@@ -65,7 +65,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "healthStatus",
   },
   {
     pregunta:
@@ -75,7 +75,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "healthStatus",
   },
   {
     pregunta: "8. ¿Ha tenido lagañas defaultantes o supuración en los ojos?",
@@ -84,7 +84,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "healthStatus",
   },
   {
     pregunta:
@@ -94,7 +94,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "healthStatus",
   },
   {
     pregunta: "10. ¿Durante el último año ha tenido más de cuatro catarros?",
@@ -103,7 +103,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "healthStatus",
   },
   {
     pregunta:

@@ -33,8 +33,8 @@ const ATRIBUTOS_DE_ENTIDAD = {
     section5: {
         sectionId: 'salud_general',
         healthStatus: 3,
-        chronicConditions: [1, 2, 3],
-        recentHospitalization: 1,
+        // chronicConditions: [1, 2, 3],
+        // recentHospitalization: 1,
     },
     section6: {
         sectionId: 'autocuidado_universal',

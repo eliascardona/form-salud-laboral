@@ -12,28 +12,43 @@ const transformateArray = (arregloOriginal, respuestasObj) => {
     return nuevoArreglo
 }
 
-const calculateScores = (transformedArray, enumAttributes, sectionKeyParam) => {
-    const actualKey = `${sectionKeyParam}`;
-    const resultado = {
-        [actualKey]: {}
+const calculateScores = (transformedArray, formatFromENUM, sectionKeyParam) => {
+    let resultadoFmt = {}
+    let resultado = {
+        [sectionKeyParam]: {},
     };
-    const section = enumAttributes[sectionKeyParam];
 
-    for (const key in section) {
+    for (const [key] of Object.entries(formatFromENUM)) {
         if (key !== "sectionId") {
-            resultado[actualKey][key] = 0;
+            resultado[sectionKeyParam][key] = 0;
         }
     }
-    resultado[actualKey]["sectionId"] = section.sectionId;
 
-    transformedArray.forEach((item) => {
-        if (item.sectionId === section.sectionId) {
-            if (resultado[actualKey].hasOwnProperty(item.enum_matcher_Attr) && item.respuesta === "Sí") {
-                resultado[actualKey][item.enum_matcher_Attr] += 1;
+    const utilTransformedArray = transformedArray.filter((item) => item.respuesta === "Sí");
+
+    utilTransformedArray.forEach((item) => {
+        for (const [enum_key] of Object.entries(formatFromENUM)) {
+            if (enum_key === item.enum_matcher_Attr) {
+                resultado[sectionKeyParam][enum_key] += 1;
             }
         }
-    });
-    return resultado;
+    })
+
+    const totalSettedKeysToResultado = Object.keys(resultado[sectionKeyParam]).length
+
+    const auxArrayKV = Object.values(resultado[sectionKeyParam])
+    let cont = 0
+    for (let i = 0; i < totalSettedKeysToResultado; i++) {
+        if (typeof auxArrayKV[i] === 'number') {
+            cont++
+        }
+    }
+    if (cont === totalSettedKeysToResultado) {
+        resultadoFmt = { ...resultado }
+        return resultadoFmt
+    } else {
+        return null
+    }
 }
 
 

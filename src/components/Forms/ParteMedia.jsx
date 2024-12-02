@@ -21,6 +21,7 @@ export default function ParteMedia({
   const setRequestBody = useRequestBodyStore((state) => state.setRequestBody);
 
   const [originalArrayTemplate, setOriginalArrayTemplate] = useState([])
+  const [scoreProperFormat, setScoreProperFormat] = useState(null)
 
   useEffect(() => {
     function copyArray() {
@@ -31,37 +32,38 @@ export default function ParteMedia({
     copyArray()
   }, [inputValue])
 
-  useEffect(() => {
-    function logging() {
-      console.log('originalTemplate we recieved')
-      console.log(originalArrayTemplate)
-    }
-    logging()
-  }, [originalArrayTemplate])
-
-  const [scoreProperFormat, setScoreProperFormat] = useState({})
-
   const handleUpdate = (evt) => {
     evt.preventDefault()
     const formData = new FormData(evt.target);
     const newInputValues = Object.fromEntries(formData)
     setInputValue({ ...inputValue, ...newInputValues })
 
-    console.log('new input values. this will be the TRANSFORMATION TEMPLATE')
-    console.log(newInputValues)
-    
+    const formatoDelENUM = ATRIBUTOS_DE_ENTIDAD[sectionKey]
+
     const nuevo = transformateArray(originalArrayTemplate, newInputValues)
 
-    if (nuevo.length > 0) {
-      const result = calculateScores(nuevo, ATRIBUTOS_DE_ENTIDAD, sectionKey)
-      setScoreProperFormat(prev => ({
-        ...result
-      }))
+    if(nuevo.length > 0) {
+      const result = calculateScores(nuevo, formatoDelENUM, sectionKey)
 
-      setRequestBody({ ...requestBody, ...scoreProperFormat })
+      console.log(`Calculo de puntajes de ${sectionKey.toUpperCase()}`)
+      console.log(result)
+      
+
+      result !== null && setScoreProperFormat(result)
+
+      scoreProperFormat != null && setRequestBody({ ...requestBody, ...scoreProperFormat })
+    } else {
+      console.log('error transformando el formulario')
     }
-    console.log('error transformando el formulario')
   }
+
+  useEffect(() => {
+    function logOfRequestBody() {
+      console.log("hasta ahora llevamos esto ->")
+      console.log(requestBody)
+    }
+    logOfRequestBody()
+  }, [requestBody])
 
   return (
     <div className="form-container">
