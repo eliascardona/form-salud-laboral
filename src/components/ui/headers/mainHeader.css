@@ -9,6 +9,9 @@
 }
 
 .MainHeader__navCtn {
+  position: fixed !important;
+  top: 0;
+  z-index: 2;
   background: var(--main-bg-color);
   width: 100%;
   display: grid;
@@ -21,7 +24,8 @@
   margin: 1rem;
   font-weight: bold;
   width: 92%;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 2rem;
   gap: var(--gap-size);
 }
 

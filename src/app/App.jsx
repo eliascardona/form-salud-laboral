@@ -3,7 +3,8 @@ import FormSteps from "../components/FormSteps/FormSteps";
 import Pagination from "../components/Pagination/Pagination";
 import MainHeader from "../components/ui/headers/MainHeader";
 import "../assets/css/App.css";
-// import Prueba from "./Prueba";
+import BottomBar from "../components/ui/bottomBar/BottomBar";
+
 
 export default function App() {
   const [step, setStep] = useState(0);
@@ -21,13 +22,9 @@ export default function App() {
             setStep={setStep}
           />
           <FormSteps step={step} setStep={setStep} />
-          <Pagination
-            pageIndicator={pageIndicatorArray}
-            step={step}
-            setStep={setStep}
-          />
         </>
       </div>
+      <BottomBar />
     </>
   )
 }
