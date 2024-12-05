@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 import CustomSelect from "../CustomSelect/CustomSelect"
-import { useFormStore, useRequestBodyStore } from '../../lib/(zustand)/formStore'
-import { calculateScores, transformateArray } from "../../lib/dataHandling/serverRequest"
-import { ATRIBUTOS_DE_ENTIDAD } from "../../lib/(ENTITIES_ENUMS)/extenseForm/enum"
+import { useFormStore, useRequestBodyStore } from '../../../lib/(zustand)/formStore'
+import { calculateScores, transformateArray } from "../../../lib/dataHandling/serverRequest"
+import { ATRIBUTOS_DE_ENTIDAD } from "../../../lib/(ENTITIES_ENUMS)/extenseForm/enum"
 import Accordion from "../ui/commonUI/accordion/Accordion"
 import "./styles/DynamicForms.css"
 

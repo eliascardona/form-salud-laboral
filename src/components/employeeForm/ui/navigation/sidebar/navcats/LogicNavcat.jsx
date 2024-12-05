@@ -1,6 +1,6 @@
 import { useState } from 'react'
-// import { main_cat } from '../../../../../lib/utils/(infoForNavbarUI)/items'
-// import { sub_cat } from '../../../../../lib/utils/(infoForNavbarUI)/items'
+// import { main_cat } from '../../../../../../lib/utils/(infoForNavbarUI)/items'
+// import { sub_cat } from '../../../../../../lib/utils/(infoForNavbarUI)/items'
 import Navcat from '../ui/navcat'
 import Subcat from '../ui/subcat'
 import '../styles/navbar.css'

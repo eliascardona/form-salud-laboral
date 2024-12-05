@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import EmployeeIdentForm from "./DatosDeIdentificacion"
-import { useFormStore } from '../../lib/(zustand)/formStore'
+import { useFormStore } from '../../../lib/(zustand)/formStore'
 import "./styles/DynamicForms.css"
 
 

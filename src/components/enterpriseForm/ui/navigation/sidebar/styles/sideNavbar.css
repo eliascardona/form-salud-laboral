@@ -1,0 +1,48 @@
+.SNavbar__modalContainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 60%;
+  height: 100%;
+  z-index: 2;
+  padding: 1rem 0 0 1rem;
+  border-radius: 1em;
+  background-color: #fff;
+  outline: 0;
+  outline-style: dotted;
+  pointer-events: auto;
+  box-shadow: rgba(10, 10, 10, 0.3) 0 0 2px 0;
+  overflow: auto;
+}
+
+.SNavbar__modalContainerActive {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 60%;
+  height: 100%;
+  z-index: 2;
+  padding: 1rem 0 0 1rem;
+  border-radius: 1em;
+  background-color: #fff;
+  outline: 0;
+  outline-style: dotted;
+  pointer-events: auto;
+  box-shadow: rgba(10, 10, 10, 0.3) 0 0 2px 0;
+  overflow: auto;
+}
+
+.SNavbar__mainLy {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 20% 80%;
+}
+
+.SNavbar__close {
+  justify-self: flex-end;
+  padding: 0.75rem 1.25rem 0.75rem 0;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+}

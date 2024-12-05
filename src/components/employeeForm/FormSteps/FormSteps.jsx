@@ -16,7 +16,7 @@ import {
   Preguntas11,
   Preguntas12,
   Preguntas13
-} from '../../textos/preguntas'
+} from '../../../textos/preguntas'
 
 
 export default function FormSteps({ step, setStep }) {

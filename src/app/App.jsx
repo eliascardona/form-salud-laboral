@@ -1,29 +1,34 @@
-import { useState } from "react";
-import FormSteps from "../components/FormSteps/FormSteps";
-import Pagination from "../components/Pagination/Pagination";
-import MainHeader from "../components/ui/headers/MainHeader";
-import "../assets/css/App.css";
-import BottomBar from "../components/ui/bottomBar/BottomBar";
+import { Routes, Route } from 'react-router-dom'
+import '../assets/css/index.css'
+
+import NotFoundPage from './routes/notFound/NotFoundPage'
+import EmployeeForm from './routes/employeeForm/EmployeeForm'
+import EnterpriseForm from './routes/enterpriseForm/EnterpriseForm'
 
 
-export default function App() {
-  const [step, setStep] = useState(0);
-  const pageIndicatorArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+export default function Page() {
+	const pagesDirectory = {
+		notFound: <NotFoundPage />,
+		employeeForm: <EmployeeForm />,
+		enterpriseForm: <EnterpriseForm />,
+	}
 
-  return (
-    <>
-      <MainHeader />
-      <div className="Home__grid">
-        <>
-          <Pagination
-            pageIndicator={pageIndicatorArray}
-            step={step}
-            setStep={setStep}
-          />
-          <FormSteps step={step} setStep={setStep} />
-        </>
-      </div>
-      <BottomBar />
-    </>
-  )
+	return (
+		<div className="body">
+			<Routes>
+				<Route
+					path="*"
+					element={pagesDirectory.notFound}
+				/>{/*  UI response for not valid path segment  */}
+				<Route
+					path="/registrar-empresa"
+					element={pagesDirectory.enterpriseForm}
+				/>
+				<Route
+					path="/registrar-empleado"
+					element={pagesDirectory.employeeForm}
+				/>
+			</Routes>
+		</div>
+	)
 }

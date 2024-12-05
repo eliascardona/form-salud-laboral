@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import CustomSelect from "../CustomSelect/CustomSelect"
-import { useFormStore } from '../../lib/(zustand)/formStore'
+import { useFormStore } from '../../../lib/(zustand)/formStore'
 import "./styles/DynamicForms.css"
 
 const Accordion = ({ title, children }) => {
