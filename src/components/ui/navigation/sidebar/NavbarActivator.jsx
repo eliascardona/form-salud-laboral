@@ -1,11 +1,11 @@
 import "./styles/navbar.css";
 
-export default function NavbarActivator({ isModalOpen, setModalToOpen }) {
+export default function NavbarActivator({ setModalToOpen }) {
   return (
     <span>
       <span
         className="Navbar__activator_item2"
-        onClick={() => setModalToOpen(true)}
+        onClick={() => setModalToOpen(p => !p)}
       >
         <ion-icon name="menu-outline"></ion-icon>
       </span>

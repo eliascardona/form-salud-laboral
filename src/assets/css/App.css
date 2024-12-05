@@ -1,4 +1,6 @@
 .Home__grid {
+  position: relative;
+  top: 100px;
   width: 100%;
   display: grid;
   place-items: center;

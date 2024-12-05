@@ -11,7 +11,6 @@ export default function MainHeader() {
         
         <span className="responsiveNavButton">
           <NavbarActivator
-            isModalOpen={isModalOpen}
             setModalToOpen={setModalToOpen}
           />
           <SideNavbar

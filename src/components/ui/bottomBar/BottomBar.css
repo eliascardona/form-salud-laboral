@@ -1,30 +1,21 @@
-:root {
-    --main-bg-color: #fff;
-    --main-shadow: rgba(10, 10, 10, 0.3) 0 2px 0 0;
-    --link-color: #4a4a4a;
-    --link-hover-bg: #7ab2d3;
-    --border-radius: 0.5rem;
-    --gap-size: 1.5rem;
-}
-
-.MainHeader__navCtn {
+.BottomBar__navCtn {
     position: fixed !important;
     bottom: 0;
     z-index: 2;
-    background: var(--main-bg-color);
     width: 100%;
     display: grid;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
-    box-shadow: var(--main-shadow);
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0 0 1px;
 }
 
-.MainHeader__navBody {
-    font-size: 1.1rem;
-    margin: 1rem;
-    font-weight: bold;
-    width: 92%;
-    justify-content: flex-start;
-    padding-left: 2rem;
-    gap: var(--gap-size);
+.BottomBar__navBody {
+    width: 96%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    justify-self: center;
+    place-items: center;
+    padding: 1.5rem 0;
 }

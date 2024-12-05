@@ -9,6 +9,8 @@ export default function SideNavbar({ isModalOpen, setModalToOpen }) {
 
   useEffect(() => {
     function checkState() {
+      console.log(isModalOpen)
+      
       if (isModalOpen) {
         setActiveModalCSS('SNavbar__modalContainerActive')
       }
@@ -19,12 +21,12 @@ export default function SideNavbar({ isModalOpen, setModalToOpen }) {
 
   return (
     <>
-      {activeModalCSS.length > 0 && (
+      {activeModalCSS === 'SNavbar__modalContainerActive' && (
         <LogicSidebar activeCSSClassName={activeModalCSS}>
           <ProfileOptions />
           <span
             className="SNavbar__close"
-            onClick={() => setModalToOpen((b) => !b)}
+            onClick={() => setModalToOpen(false)}
           >
             cerrar
           </span>

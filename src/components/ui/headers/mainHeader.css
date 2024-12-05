@@ -26,7 +26,6 @@
   width: 92%;
   justify-content: flex-start;
   padding-left: 2rem;
-  gap: var(--gap-size);
 }
 
 .MainHeader__link {
@@ -51,11 +50,10 @@
   .MainHeader__navBody {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size: 1rem;
     margin: 1rem auto;
     font-weight: bold;
     width: 100%;
-    gap: var(--gap-size);
   }
 }

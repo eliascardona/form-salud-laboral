@@ -13,7 +13,6 @@ export default function App() {
   return (
     <>
       <MainHeader />
-      {/* <Prueba /> */}
       <div className="Home__grid">
         <>
           <Pagination
