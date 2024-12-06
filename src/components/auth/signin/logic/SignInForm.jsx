@@ -4,7 +4,6 @@ import SignInFormUI from '../ui/SignInFormUI'
 
 export default function SignInForm() {
 	const [userEmail, setUserEmail] = useState("")
-	const [userName, setUserName] = useState("")
 	const [pass, setPass] = useState(null)
 
 	const signInController = async () => {

@@ -3,11 +3,7 @@ const cf2 = import.meta.env.VITE_CF2
 import { auth } from "../sdk/firebase"
 import { getIdToken } from "firebase/auth"
 
-// async function authyCallback(token="", arr=[""]) {
-// 	if(arr.length == 0) {
-// 		console.log("you must include a non-empty array")
-// 	}
-
+// async function authyCallback(token, arr) {
 // 	const opts = {
 // 		method: 'POST',
 // 		headers: {
@@ -29,7 +25,7 @@ import { getIdToken } from "firebase/auth"
 // 	}
 // }
 
-async function adminsCallback(token="") {
+async function adminsCallback(token) {
 	const options = {
 		method: 'POST',
 		headers: {
@@ -47,16 +43,15 @@ async function adminsCallback(token="") {
 }
 
 
-const authy = async (coursesArray=[""]) => {
-	if (coursesArray.length > 0) {
+const authy = async (coursesArray) => {
+	if (Array.isArray(coursesArray) && coursesArray.length > 0) {
 		getIdToken(auth.currentUser, true)
 		.then(async (userToken) => {
 			// await authyCallback(userToken, coursesArray)
 			await adminsCallback(userToken)
 		})
-	} else {
-		console.log("pasaste como argumento un arreglo vacio")
 	}
+	console.log("pasaste como argumento un arreglo vacio")
 }
 
 

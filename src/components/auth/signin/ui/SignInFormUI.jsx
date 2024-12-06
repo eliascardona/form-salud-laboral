@@ -19,17 +19,12 @@ export default function SignInFormUI({ handleUserEmail, handleUserPass, onClickC
 				</span>
 
 				<span className='SignIn__inputLine'>
-					<label className='SignIn__label'>{"  "}Repeat your password</label>
-					<input type='password' placeholder='S3CURE@PASSWORD' className='SignIn__input' />
-				</span>
-
-				<span className='SignIn__inputLine'>
 					<button 
 						type='button'
 						className='SignIn__formBtn'
 						onClick={onClickCallback}
 					>
-						crear cuenta
+						iniciar sesión
 					</button>
 				</span>
 

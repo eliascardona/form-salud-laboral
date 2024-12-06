@@ -27,17 +27,46 @@ const signInService = async (email = '', pass) => {
     }
 }
 
-
 const authTokenResolver = (userCallback, claimsCallback, errHandlerCallback) => {
     return onAuthStateChanged(
         auth,
         async (user) => {
             if (user) {
-                userCallback(user.email)
+                userCallback(user)
+                try {
+                    const token = await user.getIdToken(true)
+                    if (token.length > 0) {
+                        claimsCallback(token)
+                    } else {
+						claimsCallback(null)
+					}
+
+                } catch (e) {
+                    console.log(`FB token error: ${e.message}`)
+                    if (errHandlerCallback) errHandlerCallback(`FB token error: ${e.message}`)
+                }
+            }
+            claimsCallback(null)
+
+        },
+        (err) => {
+            userCallback(null)
+            if (errHandlerCallback) errHandlerCallback(`FB User: ${err.name}`)
+
+        }
+    )
+}
+
+const claimsTokenResolver = (userCallback, claimsCallback, errHandlerCallback) => {
+    return onAuthStateChanged(
+        auth,
+        async (user) => {
+            if (user) {
+                userCallback(user)
                 try {
                     const token = await user.getIdTokenResult(true)
-                    const claims = { ...token.claims }
-                    if (token.claims.role === 'premium-user') {
+                    const { claims } = token
+                    if (claims['role'] === 'admin') {
                         claimsCallback(claims.role)
                     }
                     claimsCallback(null)
@@ -58,6 +87,4 @@ const authTokenResolver = (userCallback, claimsCallback, errHandlerCallback) => 
     )
 }
 
-
-
-export { signUpService, signInService, authTokenResolver }
+export { signUpService, signInService, authTokenResolver, claimsTokenResolver }
