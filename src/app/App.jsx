@@ -4,6 +4,9 @@ import '../assets/css/index.css'
 import NotFoundPage from './routes/notFound/NotFoundPage'
 import EmployeeForm from './routes/employeeForm/EmployeeForm'
 import EnterpriseForm from './routes/enterpriseForm/EnterpriseForm'
+import SignInPage from './routes/auth/signin/SignInPage'
+import SignUpPage from './routes/auth/signup/SignUpPage'
+import AddAdminPage from './routes/auth/claims/AddAdminPage'
 
 
 export default function Page() {
@@ -11,6 +14,9 @@ export default function Page() {
 		notFound: <NotFoundPage />,
 		employeeForm: <EmployeeForm />,
 		enterpriseForm: <EnterpriseForm />,
+		signInPage: <SignInPage />,
+		signUpPage: <SignUpPage />,
+		addAdminPage: <AddAdminPage />,
 	}
 
 	return (
@@ -27,6 +33,18 @@ export default function Page() {
 				<Route
 					path="/registrar-empleado"
 					element={pagesDirectory.employeeForm}
+				/>
+				<Route
+					path="/iniciar-sesion"
+					element={pagesDirectory.signInPage}
+				/>
+				<Route
+					path="/crear-cuenta"
+					element={pagesDirectory.signUpPage}
+				/>
+				<Route
+					path="/anadir-admin"
+					element={pagesDirectory.addAdminPage}
 				/>
 			</Routes>
 		</div>
