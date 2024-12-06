@@ -1,11 +1,11 @@
-import { useState } from 'react'
-import { signInService } from '../../../../lib/utils/auth'
+// import { useState } from 'react'
+import { authy } from '../../../../lib/utils/cloudFunctions'
 import ClaimsFormUI from '../ui/ClaimsFormUI'
 
 export default function AddAdminForm() {
-	const [userEmail, setUserEmail] = useState("")
-	const [userName, setUserName] = useState("")
-	const [pass, setPass] = useState(null)
+	// const [userEmail, setUserEmail] = useState("")
+	// const [userName, setUserName] = useState("")
+	// const [pass, setPass] = useState(null)
 
 	const signInController = async () => {
         try {
@@ -19,12 +19,6 @@ export default function AddAdminForm() {
 	return (
 		<>
 			<ClaimsFormUI 
-				handleUserEmail={(e) => {
-					setUserEmail(e.target.value)
-				}}
-				handleUserPass={(e) => {
-					setPass(e.target.value)
-				}}
 				onClickCallback={() => signInController()}
 			/>
 		</>

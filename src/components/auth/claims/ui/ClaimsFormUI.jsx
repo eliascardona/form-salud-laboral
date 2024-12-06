@@ -1,14 +1,14 @@
 import '../styles/SignIn.css'
 
-export default function ClaimsFormUI({ handleUserEmail, handleUserPass, onClickCallback }) {
+export default function ClaimsFormUI({ onClickCallback }) {
 	return (
 		<div className='SignIn__Card'>
 			<div className='SignIn__inputGroup'>
 				<span className='SignIn__formTitle'>
-					Take into yout account
+					Asigna el rol de administrador al usuario actual
 				</span>
 
-				<span className='SignIn__inputLine'>
+				{/* <span className='SignIn__inputLine'>
 					<label className='SignIn__label'>{"  "}Email</label>
 					<input type='email' placeholder='doe@example.com' className='SignIn__input' onChange={handleUserEmail} />
 				</span>
@@ -21,7 +21,7 @@ export default function ClaimsFormUI({ handleUserEmail, handleUserPass, onClickC
 				<span className='SignIn__inputLine'>
 					<label className='SignIn__label'>{"  "}Repeat your password</label>
 					<input type='password' placeholder='S3CURE@PASSWORD' className='SignIn__input' />
-				</span>
+				</span> */}
 
 				<span className='SignIn__inputLine'>
 					<button 
