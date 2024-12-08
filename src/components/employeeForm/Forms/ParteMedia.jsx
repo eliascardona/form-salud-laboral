@@ -1,8 +1,15 @@
 import { useState, useEffect } from "react"
 import CustomSelect from "../CustomSelect/CustomSelect"
+
+// zustand imports
 import { useFormStore, useRequestBodyStore } from '../../../lib/(zustand)/formStore'
-import { calculateScores, transformateArray } from "../../../lib/dataHandling/serverRequest"
+// import { useScoreFormatStore } from '../../../lib/(zustand)/formStore'
+
+// logic files imports
 import { ATRIBUTOS_DE_ENTIDAD } from "../../../lib/(ENTITIES_ENUMS)/extenseForm/enum"
+import { calculateScores, transformateArray } from "../../../lib/dataHandling/serverRequest"
+
+// UI and CSS imports
 import Accordion from "../ui/commonUI/accordion/Accordion"
 import "./styles/DynamicForms.css"
 
@@ -11,9 +18,11 @@ export default function ParteMedia({
   surveyTemplate = [],
   sectionTitle,
   sectionId,
+  previousSectionKey,
   sectionKey,
   step,
   setStep,
+  // scoreFormat
 }) {
   const inputValue = useFormStore((state) => state.inputValue);
   const setInputValue = useFormStore((state) => state.setInputValue);
@@ -21,7 +30,7 @@ export default function ParteMedia({
   const setRequestBody = useRequestBodyStore((state) => state.setRequestBody);
 
   const [originalArrayTemplate, setOriginalArrayTemplate] = useState([])
-  const [scoreProperFormat, setScoreProperFormat] = useState(null)
+  const [scoreProperFormat, setScoreProperFormat] = useState({})
 
   useEffect(() => {
     function copyArray() {
@@ -32,9 +41,11 @@ export default function ParteMedia({
     copyArray()
   }, [inputValue])
 
+  const [hasFormSubmitted, setHasFormSubmitted] = useState(false)
+
   const handleUpdate = (evt) => {
     evt.preventDefault()
-    const formData = new FormData(evt.target);
+    const formData = new FormData(evt.target)
     const newInputValues = Object.fromEntries(formData)
     setInputValue({ ...inputValue, ...newInputValues })
 
@@ -42,28 +53,67 @@ export default function ParteMedia({
 
     const nuevo = transformateArray(originalArrayTemplate, newInputValues)
 
-    if(nuevo.length > 0) {
+    if (nuevo.length > 0) {
       const result = calculateScores(nuevo, formatoDelENUM, sectionKey)
 
-      console.log(`Calculo de puntajes de ${sectionKey.toUpperCase()}`)
-      console.log(result)
-      
+      if (result !== null) {
+        setScoreProperFormat(result)
+        setRequestBody(result)
 
-      result !== null && setScoreProperFormat(result)
+        setHasFormSubmitted(true)
+      }
 
-      scoreProperFormat != null && setRequestBody({ ...requestBody, ...scoreProperFormat })
     } else {
       console.log('error transformando el formulario')
     }
   }
+  useEffect(() => {
+    function loggOne() {
+      console.log(' ------------- inputValue from zustand -------------')
+      console.log(inputValue)
+      console.log(' ------------- requestBody -------------')
+      console.log(requestBody)
+      console.log(' ------------- properly format -------------')
+      console.log(scoreProperFormat)
+    }
+    loggOne()
+  }, [requestBody])
+
 
   useEffect(() => {
-    function logOfRequestBody() {
-      console.log("hasta ahora llevamos esto ->")
-      console.log(requestBody)
+    function syncFormProgress() {
+      if (Object.hasOwn(requestBody, previousSectionKey)) {
+
+        const previousResponses = requestBody[previousSectionKey] || { lol: 'lol' }
+
+        const accumulatedResponses = {
+          ...previousResponses,
+          ...scoreProperFormat[previousSectionKey],
+        }
+
+        setScoreProperFormat((prevRequestBody) => ({
+          ...prevRequestBody,
+          [previousSectionKey]: accumulatedResponses,
+        }))
+        setRequestBody({ ...scoreProperFormat })
+
+
+      } else {
+        console.log('aun no se envía alguna seccion (2+) del formulario')
+      }
     }
-    logOfRequestBody()
-  }, [requestBody])
+    syncFormProgress()
+  }, [])
+
+
+  useEffect(() => {
+    function clean() {
+      if (hasFormSubmitted) {
+        setHasFormSubmitted(false)
+      }
+    }
+    clean()
+  }, [hasFormSubmitted])
 
   return (
     <div className="form-container">

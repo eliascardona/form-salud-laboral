@@ -7,6 +7,13 @@ const useFormStore = create((set) => ({
     }
 }))
 
+const useScoreFormatStore = create((set) => ({
+    scoreFormat: {},
+    setScoreFormat: (newScore) => {
+        set({ scoreFormat: newScore })
+    }
+}))
+
 const useRequestBodyStore = create((set) => ({
     requestBody: {},
     setRequestBody: (newValue) => {
@@ -14,4 +21,4 @@ const useRequestBodyStore = create((set) => ({
     }
 }))
 
-export { useFormStore, useRequestBodyStore }
+export { useFormStore, useScoreFormatStore, useRequestBodyStore }
