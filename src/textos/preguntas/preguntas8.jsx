@@ -1,3 +1,5 @@
+import { NOMBRE_SECCION } from "../../lib/(ENTITIES_ENUMS)/extenseForm/enum";
+
 const MantenimientoAlimentosPreguntasArray = [
   {
     pregunta: "¿En su área de trabajo cuenta con servicio de comedor? ",
@@ -6,7 +8,7 @@ const MantenimientoAlimentosPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section8",
     sectionId: "nutricion",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "consumoDiarioFrutasVerduras",
   },
   {
     pregunta:
@@ -16,7 +18,7 @@ const MantenimientoAlimentosPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section8",
     sectionId: "nutricion",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "consumoDiarioFrutasVerduras",
   },
   {
     pregunta:
@@ -26,7 +28,7 @@ const MantenimientoAlimentosPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section8",
     sectionId: "nutricion",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "consumoDiarioFrutasVerduras",
   },
   {
     pregunta:
@@ -36,7 +38,7 @@ const MantenimientoAlimentosPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section8",
     sectionId: "nutricion",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "consumoDiarioFrutasVerduras",
   },
 ];
 

@@ -1,3 +1,5 @@
+import { NOMBRE_SECCION } from "../../lib/(ENTITIES_ENUMS)/extenseForm/enum";
+
 const EstadoSisSaludPreguntasArray = [
   {
     pregunta: "1. ¿Le zumban los oídos?",
@@ -6,7 +8,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "healthStatus",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "2. ¿Durante el último año ha notado que oye menos?",
@@ -15,7 +17,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "healthStatus",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta:
@@ -25,7 +27,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "healthStatus",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta:
@@ -40,7 +42,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta:
@@ -55,7 +57,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta:
@@ -65,7 +67,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "healthStatus",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta:
@@ -75,7 +77,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "healthStatus",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "8. ¿Ha tenido lagañas defaultantes o supuración en los ojos?",
@@ -84,7 +86,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "healthStatus",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta:
@@ -94,7 +96,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "healthStatus",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "10. ¿Durante el último año ha tenido más de cuatro catarros?",
@@ -103,7 +105,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "healthStatus",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta:
@@ -113,7 +115,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta:
@@ -123,7 +125,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "13. ¿Estas molestias han durado más de 15 días?",
@@ -132,7 +134,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta:
@@ -142,7 +144,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "15. En este caso tosió con flemas.",
@@ -151,7 +153,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta:
@@ -161,7 +163,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "17. Se le reseca la piel frecuentemente.",
@@ -170,7 +172,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "18. Tiene ardor o comezón en la piel.",
@@ -179,7 +181,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "19. Le salen ampollas en alguna parte de su cuerpo.",
@@ -188,7 +190,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "20. Tiene piel con escamas en alguna parte de su cuerpo.",
@@ -197,7 +199,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta:
@@ -207,7 +209,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "22. ¿Se le agrita parte de la piel?",
@@ -216,7 +218,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta:
@@ -226,7 +228,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta:
@@ -236,7 +238,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "25. Frecuentemente tiene dificultad para conciliar el sueño",
@@ -245,7 +247,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "26. Con frecuencia tiene sueño intranquilo",
@@ -254,7 +256,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta:
@@ -264,7 +266,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "28. ¿Ha tenido dolor de cabeza más de dos veces por mes?",
@@ -273,7 +275,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta:
@@ -283,7 +285,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "30. ¿El dolor de cabeza es tan fuerte que le impide trabajar?",
@@ -292,7 +294,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta:
@@ -302,7 +304,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta:
@@ -312,7 +314,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "33. ¿El dolor se presenta solo en un lado de la cabeza?",
@@ -321,7 +323,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta:
@@ -337,7 +339,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "35. Hombro, codos, muñecas o manos:",
@@ -346,7 +348,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "36. Espalda, cintura, cadera o asentaderas:",
@@ -355,7 +357,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "37. Muslos, rodillas, tobillos o pies:",
@@ -364,7 +366,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "38. ¿Ha tenido mucho dolor en la parte baja de la espalda?",
@@ -373,7 +375,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "39. ¿En caso afirmativo el dolor se corre a la pierna?",
@@ -382,7 +384,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "40. ¿Ha tenido varices en las piernas?",
@@ -391,7 +393,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "41. ¿Durante el último año ha tenido hemorroides?",
@@ -400,7 +402,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta:
@@ -410,7 +412,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
   {
     pregunta: "¿Cuál?:",
@@ -419,7 +421,7 @@ const EstadoSisSaludPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section5",
     sectionId: "salud_general",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeSalud",
   },
 ];
 

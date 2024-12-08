@@ -1,3 +1,5 @@
+import { NOMBRE_SECCION } from "../../lib/(ENTITIES_ENUMS)/extenseForm/enum";
+
 const PromocionHumanoPreguntasArray = [
   {
     pregunta: (
@@ -14,7 +16,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta:
@@ -30,7 +32,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta:
@@ -46,7 +48,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta:
@@ -62,7 +64,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta:
@@ -78,7 +80,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta:
@@ -94,7 +96,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta:
@@ -110,7 +112,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta:
@@ -126,7 +128,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta:
@@ -142,7 +144,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta:
@@ -158,7 +160,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta:
@@ -174,7 +176,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta:
@@ -190,7 +192,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta:
@@ -206,7 +208,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta:
@@ -222,7 +224,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta: (
@@ -242,7 +244,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta: "2. ¿Se ha sentido muy irritable?",
@@ -251,7 +253,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta:
@@ -261,7 +263,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta: "4. ¿Ha dormido mal, ha tenido dificultades para dormir?",
@@ -270,7 +272,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta: "5. ¿Ha tenido dolores de cabeza o nuca?",
@@ -279,7 +281,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta:
@@ -289,7 +291,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta: "7. ¿Ha estado preocupado por su salud?",
@@ -298,7 +300,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta:
@@ -308,7 +310,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta: (
@@ -328,7 +330,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta: "2. ¿Ha perdido usted su interés por las cosas?",
@@ -337,7 +339,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta: "3. ¿Ha perdido la confianza en sí mismo?",
@@ -346,7 +348,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta:
@@ -356,7 +358,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta: "5. ¿Ha tenido dificultades para concentrarse?",
@@ -365,7 +367,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta: "6. ¿Ha perdido peso? (a causa de su falta de apetito)",
@@ -374,7 +376,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta: "7. ¿Se ha estado despertando demasiado temprano?",
@@ -383,7 +385,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta: "8. ¿Se ha sentido usted enlentecido?",
@@ -392,7 +394,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
   {
     pregunta:
@@ -402,7 +404,7 @@ const PromocionHumanoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section13",
     sectionId: "promocion_humana",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "saludMental",
   },
 ];
 

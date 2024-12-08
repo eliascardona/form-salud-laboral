@@ -1,3 +1,5 @@
+import { NOMBRE_SECCION } from "../../lib/(ENTITIES_ENUMS)/extenseForm/enum";
+
 const FactoresAmbientalesPreguntasArray = [
   {
     pregunta: (
@@ -13,7 +15,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "2. Frío",
@@ -22,7 +24,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "3. Cambios bruscos de temperatura",
@@ -31,7 +33,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "4.Falta de ventilación",
@@ -40,7 +42,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "5. Humedad",
@@ -49,7 +51,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "6. Poca iluminación ",
@@ -58,7 +60,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "7. Mucha iluminación",
@@ -67,7 +69,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "8. Ruido ",
@@ -76,7 +78,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "9. Vibraciones",
@@ -85,7 +87,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "10. Radiaciones de soldar",
@@ -94,7 +96,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "11. Rayos X",
@@ -103,7 +105,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: (
@@ -119,7 +121,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "13. Animales ponzoñosos (víboras, alacranes, abejas) ",
@@ -128,7 +130,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "14. Palomas u otras aves ",
@@ -137,7 +139,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "16. Humos",
@@ -146,7 +148,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "17. Gases o vapores",
@@ -155,7 +157,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "18. Líquidos (disolventes o ácidos",
@@ -164,7 +166,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: (
@@ -180,7 +182,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta:
@@ -190,7 +192,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta:
@@ -200,7 +202,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "22. Las instalaciones (eléctricas, neumáticas o de gas)",
@@ -209,7 +211,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta:
@@ -219,7 +221,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta:
@@ -229,7 +231,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "25. Los equipos de soldadura y corte",
@@ -238,7 +240,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "26. Las compresoras o calderas en el área de labores",
@@ -247,7 +249,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta:
@@ -257,7 +259,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "28. La falta de orden o limpieza",
@@ -266,7 +268,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta:
@@ -276,7 +278,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: (
@@ -292,7 +294,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "31. En el comedor y los alimentos ",
@@ -301,7 +303,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "32. El agua para beber ",
@@ -310,7 +312,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: (
@@ -326,7 +328,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta:
@@ -336,7 +338,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "35. Rotación de turnos",
@@ -345,7 +347,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "36. Trabajando nocturno",
@@ -354,7 +356,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "37. No poder desatender su tarea por más de 5 minutos",
@@ -363,7 +365,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "38. Mucha concentración para no accidentarse",
@@ -372,7 +374,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "39. Realizar una tarea muy minuciosa",
@@ -381,7 +383,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "40. Un trabajo repetitivo. Si NO, pase a la pregunta 43",
@@ -390,7 +392,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta:
@@ -400,7 +402,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta:
@@ -410,7 +412,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "43. Cubrir una cuota de producción",
@@ -419,7 +421,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "44. Realizar un trabajo a destajo",
@@ -428,7 +430,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "45. Soportar una supervisión estricta",
@@ -437,7 +439,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "46. Un estricto control de calidad",
@@ -446,7 +448,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "47. Estar en comunicación con sus compañeros",
@@ -455,7 +457,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "48. Trabajar en un espacio reducido",
@@ -464,7 +466,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "49. Estar fijo en su lugar de trabajo",
@@ -473,7 +475,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "50. Realizar un trabajo aburrido",
@@ -482,7 +484,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "51. Ejecutar un trabajo peligroso",
@@ -491,7 +493,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "52. Ejecutar un trabajo denigrante",
@@ -500,7 +502,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "53. Recibir órdenes confusas y muy pocas claras de su jefe",
@@ -509,7 +511,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta:
@@ -519,7 +521,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "55. Realizar esfuerzo físico muy pesado",
@@ -528,7 +530,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta:
@@ -538,7 +540,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta:
@@ -548,7 +550,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
   {
     pregunta: "3. Participa en alguno de ellos",
@@ -557,7 +559,7 @@ const FactoresAmbientalesPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section12",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "calidadDelAmbienteLaboral",
   },
 ];
 

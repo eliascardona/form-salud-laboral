@@ -1,3 +1,5 @@
+import { NOMBRE_SECCION } from "../../lib/(ENTITIES_ENUMS)/extenseForm/enum";
+
 const AuditivoOcularPreguntasArray = [
   {
     pregunta: (
@@ -12,7 +14,7 @@ const AuditivoOcularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section10",
     sectionId: "salud_audiovisual",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionAuditiva",
   },
   {
     pregunta: "¿Cuál?",
@@ -22,7 +24,7 @@ const AuditivoOcularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section10",
     sectionId: "salud_audiovisual",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionAuditiva",
   },
   {
     pregunta:
@@ -32,7 +34,7 @@ const AuditivoOcularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section10",
     sectionId: "salud_audiovisual",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionAuditiva",
   },
   {
     pregunta: "¿Necesita apoyo para Escuchar?",
@@ -41,7 +43,7 @@ const AuditivoOcularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section10",
     sectionId: "salud_audiovisual",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionAuditiva",
   },
   {
     pregunta: "¿Necesita apoyo para ver?",
@@ -50,7 +52,7 @@ const AuditivoOcularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section10",
     sectionId: "salud_audiovisual",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionVisual",
   },
   {
     pregunta: "¿Cuál?",
@@ -69,7 +71,7 @@ const AuditivoOcularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section10",
     sectionId: "salud_audiovisual",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionVisual",
   },
   {
     pregunta: "¿Desde cuándo?",
@@ -78,7 +80,7 @@ const AuditivoOcularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section10",
     sectionId: "salud_audiovisual",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionVisual",
   },
 ];
 

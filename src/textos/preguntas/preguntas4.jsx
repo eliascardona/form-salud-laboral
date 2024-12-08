@@ -1,3 +1,5 @@
+import { NOMBRE_SECCION } from "../../lib/(ENTITIES_ENUMS)/extenseForm/enum";
+
 const FactoresSocioEcoPreguntasArray = [
   {
     pregunta: "1. Área o departamento donde trabaja:  ",
@@ -18,7 +20,7 @@ const FactoresSocioEcoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section4",
     sectionId: "factores_socioculturales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoLaboral",
   },
   {
     pregunta: "2. Puesto que ocupa actualmente:  ",
@@ -38,7 +40,7 @@ const FactoresSocioEcoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section4",
     sectionId: "factores_socioculturales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoLaboral",
   },
   {
     pregunta: "3. Cuánto tiempo lleva en la empresa:  ",
@@ -56,7 +58,7 @@ const FactoresSocioEcoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section4",
     sectionId: "factores_socioculturales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoLaboral",
   },
   {
     pregunta: "4. Es trabajador de: confianza ó :  ",
@@ -65,7 +67,7 @@ const FactoresSocioEcoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section4",
     sectionId: "factores_socioculturales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoLaboral",
   },
 ];
 

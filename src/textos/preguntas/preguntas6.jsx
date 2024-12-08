@@ -1,3 +1,5 @@
+import { NOMBRE_SECCION } from "../../lib/(ENTITIES_ENUMS)/extenseForm/enum";
+
 const RequisitosAutoCuidadoPreguntasArray = [
   {
     pregunta:
@@ -12,7 +14,7 @@ const RequisitosAutoCuidadoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section6",
     sectionId: "autocuidado_universal",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "habitosDeAutocuidado",
   },
   {
     pregunta:
@@ -22,7 +24,7 @@ const RequisitosAutoCuidadoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section6",
     sectionId: "autocuidado_universal",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "habitosDeAutocuidado",
   },
   {
     pregunta:
@@ -37,7 +39,7 @@ const RequisitosAutoCuidadoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section6",
     sectionId: "autocuidado_universal",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "habitosDeAutocuidado",
   },
   {
     pregunta: "4) ¿Qué cigarrillo le es más difícil omitir (dejar de fumar)? ",
@@ -49,7 +51,7 @@ const RequisitosAutoCuidadoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section6",
     sectionId: "autocuidado_universal",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "habitosDeAutocuidado",
   },
   {
     pregunta: "5) ¿Le es difícil no fumar donde está prohibido?  ",
@@ -58,7 +60,7 @@ const RequisitosAutoCuidadoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section6",
     sectionId: "autocuidado_universal",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "habitosDeAutocuidado",
   },
   {
     pregunta: "6) ¿Le es difícil no fumar donde está prohibido?  ",
@@ -67,7 +69,7 @@ const RequisitosAutoCuidadoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section6",
     sectionId: "autocuidado_universal",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "habitosDeAutocuidado",
   },
 ];
 

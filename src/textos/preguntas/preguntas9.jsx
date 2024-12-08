@@ -1,3 +1,5 @@
+import { NOMBRE_SECCION } from "../../lib/(ENTITIES_ENUMS)/extenseForm/enum";
+
 const ActividadReposoPreguntasArray = [
   {
     pregunta: "1. Realiza esfuerzo físico muy pesado ",
@@ -6,7 +8,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta: (
@@ -22,7 +24,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta: "3. Espalada o cintura ",
@@ -31,7 +33,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta: "4. Piernas ",
@@ -40,7 +42,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta: (
@@ -55,7 +57,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta:
@@ -65,7 +67,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta: "7. Levantar objetos a alturas por arriba de los hombros",
@@ -74,7 +76,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta: "8. Cargar, empujar o jalar objetos hasta 5 kilos",
@@ -83,7 +85,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta: "9. Cargar, empujar o jalar objetos de 6 a 15 kilos",
@@ -92,7 +94,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta: "10. Cargar, empujar o jalar objetos de 16 a 30 kilos",
@@ -101,7 +103,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta: "11. Cargar, empujar o jalar objetos de más de 30 kilos",
@@ -110,7 +112,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta: "12. Usar herramientas manuales como martillo, cuchillo o pinza",
@@ -119,7 +121,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta: "13. Usar herramienta como pico, pala, machete o marro",
@@ -128,7 +130,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta: "14. Adoptar posiciones incomodas o forzadas",
@@ -137,7 +139,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta:
@@ -147,7 +149,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta: "16. ¿Para realizar su trabajo usted requiere estar encorvado?",
@@ -156,7 +158,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta:
@@ -166,7 +168,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta: "18. Realiza movimientos de rotación de la cintura",
@@ -175,7 +177,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta: "19. Al realizar su trabajo los hombros están tensos",
@@ -184,7 +186,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta:
@@ -194,7 +196,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta:
@@ -204,7 +206,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta:
@@ -214,7 +216,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta:
@@ -224,7 +226,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta: "24. Utiliza algún asiento sin respaldo o es incómodo",
@@ -233,7 +235,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta:
@@ -243,7 +245,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta: "26. Permanece de pie para trabajar",
@@ -252,7 +254,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta: "27.Para trabajar permanece sentado",
@@ -261,7 +263,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta: "28. La superficie donde se sienta es incómoda",
@@ -270,7 +272,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta:
@@ -280,7 +282,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
   {
     pregunta:
@@ -290,7 +292,7 @@ const ActividadReposoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section9",
     sectionId: "estilo_de_vida",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "nivelDeActividad",
   },
 ];
 
