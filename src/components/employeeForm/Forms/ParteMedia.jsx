@@ -30,7 +30,10 @@ export default function ParteMedia({
   const setRequestBody = useRequestBodyStore((state) => state.setRequestBody);
 
   const [originalArrayTemplate, setOriginalArrayTemplate] = useState([])
-  const [scoreProperFormat, setScoreProperFormat] = useState({})
+  // OBSOLTEO:  Anteriormente se estaba guardando doblemente el
+  //            resultado de conversion del formato 'respuestas' al formato 'puntaje'.
+  //            Esto solamente aumentaba el estrés del manejo del estado en el componente.
+  // const [scoreProperFormat, setScoreProperFormat] = useState({})
 
   useEffect(() => {
     function copyArray() {

@@ -138,6 +138,10 @@ export default function FormSteps({ step, setStep }) {
         ) : step === 12 ? (
           <ParteFinal
             surveyTemplate={Final_Survey_Templates[step].jsx}
+            sectionTitle={Final_Survey_Templates[step].title}
+            sectionId={Final_Survey_Templates[step].sectionId}
+            previousSectionKey={Final_Survey_Templates[step].previousSectionKey}
+            sectionKey={Final_Survey_Templates[step].sectionKey}
             step={step}
             setStep={setStep}
           />
