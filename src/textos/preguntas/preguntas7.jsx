@@ -1,3 +1,5 @@
+import { NOMBRE_SECCION } from "../../lib/(ENTITIES_ENUMS)/extenseForm/enum";
+
 const SistemaCardiovascularPreguntasArray = [
   {
     pregunta: "Peso (kg):",
@@ -7,7 +9,7 @@ const SistemaCardiovascularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section7",
     sectionId: "salud_cardiovascular",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionCardiaca",
   },
   {
     pregunta: "Talla (cm):",
@@ -17,7 +19,7 @@ const SistemaCardiovascularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section7",
     sectionId: "salud_cardiovascular",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionCardiaca",
   },
   {
     pregunta: "TA 1er. toma (mmHg):",
@@ -27,7 +29,7 @@ const SistemaCardiovascularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section7",
     sectionId: "salud_cardiovascular",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionCardiaca",
   },
   {
     pregunta: "TA 2da. toma (mmHg):",
@@ -37,7 +39,7 @@ const SistemaCardiovascularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section7",
     sectionId: "salud_cardiovascular",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionCardiaca",
   },
   {
     pregunta: "IMC:",
@@ -47,7 +49,7 @@ const SistemaCardiovascularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section7",
     sectionId: "salud_cardiovascular",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionCardiaca",
   },
   {
     pregunta: "TA promedio (mmHg):",
@@ -57,7 +59,7 @@ const SistemaCardiovascularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section7",
     sectionId: "salud_cardiovascular",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionCardiaca",
   },
   {
     pregunta: "Clasificación:",
@@ -71,7 +73,7 @@ const SistemaCardiovascularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section7",
     sectionId: "salud_cardiovascular",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionCardiaca",
   },
   {
     pregunta: (
@@ -89,7 +91,7 @@ const SistemaCardiovascularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section7",
     sectionId: "salud_cardiovascular",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionCardiaca",
   },
   {
     pregunta:
@@ -99,7 +101,7 @@ const SistemaCardiovascularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section7",
     sectionId: "salud_cardiovascular",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionCardiaca",
   },
   {
     pregunta: "3. Mujer. ¿Ha tenido algún bebe con más de 4kg al nacer? SI=1 ",
@@ -108,7 +110,7 @@ const SistemaCardiovascularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section7",
     sectionId: "salud_cardiovascular",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionCardiaca",
   },
   {
     pregunta:
@@ -118,7 +120,7 @@ const SistemaCardiovascularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section7",
     sectionId: "salud_cardiovascular",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionCardiaca",
   },
   {
     pregunta: "5. Su IMC se ubica en: normal=0, sobrepeso=5, obeso=10.",
@@ -127,7 +129,7 @@ const SistemaCardiovascularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section7",
     sectionId: "salud_cardiovascular",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionCardiaca",
   },
   {
     pregunta: "6. Cintura mujer>=80cm y hombre >=90cm. SI=10",
@@ -136,7 +138,7 @@ const SistemaCardiovascularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section7",
     sectionId: "salud_cardiovascular",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionCardiaca",
   },
   {
     pregunta:
@@ -146,7 +148,7 @@ const SistemaCardiovascularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section7",
     sectionId: "salud_cardiovascular",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionCardiaca",
   },
   {
     pregunta: "8. Tiene entre 45-64 años. SI=5",
@@ -155,7 +157,7 @@ const SistemaCardiovascularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section7",
     sectionId: "salud_cardiovascular",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionCardiaca",
   },
   {
     pregunta: "9. Tiene 65 o más años de edad. SI=9",
@@ -164,7 +166,7 @@ const SistemaCardiovascularPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section7",
     sectionId: "salud_cardiovascular",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "condicionCardiaca",
   },
 ];
 

@@ -1,3 +1,5 @@
+import { NOMBRE_SECCION } from "../../lib/(ENTITIES_ENUMS)/extenseForm/enum";
+
 const FactoresSistemaPreguntasArray = [
   {
     pregunta: "Rol que ocupa en la familia: ",
@@ -12,7 +14,7 @@ const FactoresSistemaPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section3",
     sectionId: "factores_familiares",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "apoyoFamiliar",
   },
   {
     pregunta: "¿Cuántos hijos tiene?  ",
@@ -27,7 +29,7 @@ const FactoresSistemaPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section3",
     sectionId: "factores_familiares",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "apoyoFamiliar",
   },
   {
     pregunta: "Relación con la familia:  ",
@@ -36,7 +38,7 @@ const FactoresSistemaPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section3",
     sectionId: "factores_familiares",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "apoyoFamiliar",
   },
 ];
 

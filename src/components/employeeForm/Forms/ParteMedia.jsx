@@ -57,8 +57,7 @@ export default function ParteMedia({
       const result = calculateScores(nuevo, formatoDelENUM, sectionKey)
 
       if (result !== null) {
-        setScoreProperFormat(result)
-        setRequestBody(result)
+        setRequestBody(({ ...requestBody, ...result }))
 
         setHasFormSubmitted(true)
       }
@@ -73,38 +72,9 @@ export default function ParteMedia({
       console.log(inputValue)
       console.log(' ------------- requestBody -------------')
       console.log(requestBody)
-      console.log(' ------------- properly format -------------')
-      console.log(scoreProperFormat)
     }
     loggOne()
   }, [requestBody])
-
-
-  useEffect(() => {
-    function syncFormProgress() {
-      if (Object.hasOwn(requestBody, previousSectionKey)) {
-
-        const previousResponses = requestBody[previousSectionKey] || { lol: 'lol' }
-
-        const accumulatedResponses = {
-          ...previousResponses,
-          ...scoreProperFormat[previousSectionKey],
-        }
-
-        setScoreProperFormat((prevRequestBody) => ({
-          ...prevRequestBody,
-          [previousSectionKey]: accumulatedResponses,
-        }))
-        setRequestBody({ ...scoreProperFormat })
-
-
-      } else {
-        console.log('aun no se envía alguna seccion (2+) del formulario')
-      }
-    }
-    syncFormProgress()
-  }, [])
-
 
   useEffect(() => {
     function clean() {

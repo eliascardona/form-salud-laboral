@@ -1,3 +1,5 @@
+import { NOMBRE_SECCION } from "../../lib/(ENTITIES_ENUMS)/extenseForm/enum";
+
 const AreaTrabajoPreguntasArray = [
   {
     pregunta: "1. Le gustaría que sus hijos trabajaran en lo mismo que usted:",
@@ -6,7 +8,7 @@ const AreaTrabajoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section2",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "satisfaccionLaboral",
   },
   {
     pregunta: "2. Le da satisfacción la realización de sus actividades:",
@@ -15,7 +17,7 @@ const AreaTrabajoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section2",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "satisfaccionLaboral",
   },
   {
     pregunta: "3. Está interesado en su trabajo:",
@@ -24,7 +26,7 @@ const AreaTrabajoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section2",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "satisfaccionLaboral",
   },
   {
     pregunta:
@@ -34,7 +36,7 @@ const AreaTrabajoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section2",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "satisfaccionLaboral",
   },
   {
     pregunta:
@@ -44,7 +46,7 @@ const AreaTrabajoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section2",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "satisfaccionLaboral",
   },
   {
     pregunta:
@@ -54,7 +56,7 @@ const AreaTrabajoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section2",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "satisfaccionLaboral",
   },
   {
     pregunta: "7. Puede usted decidir sobre cómo realizar su trabajo:",
@@ -63,7 +65,7 @@ const AreaTrabajoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section2",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "satisfaccionLaboral",
   },
   {
     pregunta: "8. Puede usted fijar el ritmo de trabajo:",
@@ -72,7 +74,7 @@ const AreaTrabajoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section2",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "satisfaccionLaboral",
   },
   {
     pregunta:
@@ -82,7 +84,7 @@ const AreaTrabajoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section2",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "satisfaccionLaboral",
   },
   {
     pregunta: "10. Su trabajo es importante para sus jefes:",
@@ -91,7 +93,7 @@ const AreaTrabajoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section2",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "satisfaccionLaboral",
   },
   {
     pregunta:
@@ -101,7 +103,7 @@ const AreaTrabajoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section2",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "satisfaccionLaboral",
   },
   {
     pregunta:
@@ -117,7 +119,7 @@ const AreaTrabajoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section2",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "satisfaccionLaboral",
   },
   {
     pregunta: "13. En cuántas de esas ocasiones fue por motivo de salud:",
@@ -132,7 +134,7 @@ const AreaTrabajoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section2",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "satisfaccionLaboral",
   },
   {
     pregunta: "14. Cuántos días del año en total faltó por motivos de salud:",
@@ -147,7 +149,7 @@ const AreaTrabajoPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section2",
     sectionId: "factores_ambientales",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "satisfaccionLaboral",
   },
 ];
 

@@ -1,3 +1,5 @@
+import { NOMBRE_SECCION } from "../../lib/(ENTITIES_ENUMS)/extenseForm/enum";
+
 const PrevencionPeligrosPreguntasArray = [
   {
     pregunta: (
@@ -22,7 +24,7 @@ const PrevencionPeligrosPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section11",
     sectionId: "prevencion_de_riesgos",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeFumador",
   },
   {
     pregunta:
@@ -38,7 +40,7 @@ const PrevencionPeligrosPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section11",
     sectionId: "prevencion_de_riesgos",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeFumador",
   },
   {
     pregunta:
@@ -57,7 +59,7 @@ const PrevencionPeligrosPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section11",
     sectionId: "prevencion_de_riesgos",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeFumador",
   },
   {
     pregunta:
@@ -73,7 +75,7 @@ const PrevencionPeligrosPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section11",
     sectionId: "prevencion_de_riesgos",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeFumador",
   },
   {
     pregunta:
@@ -89,7 +91,7 @@ const PrevencionPeligrosPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section11",
     sectionId: "prevencion_de_riesgos",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeFumador",
   },
   {
     pregunta:
@@ -105,7 +107,7 @@ const PrevencionPeligrosPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section11",
     sectionId: "prevencion_de_riesgos",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeFumador",
   },
   {
     pregunta:
@@ -121,7 +123,7 @@ const PrevencionPeligrosPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section11",
     sectionId: "prevencion_de_riesgos",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeFumador",
   },
   {
     pregunta:
@@ -137,7 +139,7 @@ const PrevencionPeligrosPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section11",
     sectionId: "prevencion_de_riesgos",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeFumador",
   },
   {
     pregunta:
@@ -151,7 +153,7 @@ const PrevencionPeligrosPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section11",
     sectionId: "prevencion_de_riesgos",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeFumador",
   },
   {
     pregunta:
@@ -165,7 +167,7 @@ const PrevencionPeligrosPreguntasArray = [
     tipoPregunta: "positivo",
     sectionKey: "section11",
     sectionId: "prevencion_de_riesgos",
-    enum_matcher_Attr: "jobSatisfaction",
+    enum_matcher_Attr: "estadoDeFumador",
   },
 ];
 
