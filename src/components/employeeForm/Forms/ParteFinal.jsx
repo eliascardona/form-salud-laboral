@@ -42,7 +42,7 @@ export default function ParteMedia({
 
   const [hasFormSubmitted, setHasFormSubmitted] = useState(false)
 
-  const handleUpdate = (evt) => {
+  const handleUpdate = async (evt) => {
     evt.preventDefault()
     const formData = new FormData(evt.target)
     const newInputValues = Object.fromEntries(formData)
@@ -58,6 +58,17 @@ export default function ParteMedia({
       if (result !== null) {
         setRequestBody(({ ...requestBody, ...result }))
 
+        const r = await fetch('http://localhost:8085/evaluar-puntajes', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(requestBody)
+        })
+        const j = await r.json()
+        if (j != null) {
+          console.log(j)
+        }
         setHasFormSubmitted(true)
       }
 
@@ -132,9 +143,9 @@ export default function ParteMedia({
         </div>
 
         <div className="button-container">
-        <button type="submit" className="button">
-          {"Guardar entrevista en la base de datos"}
-        </button>
+          <button type="submit" className="button">
+            {"Guardar entrevista en la base de datos"}
+          </button>
         </div>
 
       </form>
