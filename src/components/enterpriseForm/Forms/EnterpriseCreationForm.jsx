@@ -3,7 +3,7 @@ import "./styles/EnterpriseCreationForm.css"
 function EnterpriseInput({ labelv, namev, placeholderv }) {
   return (
     <div>
-      <label className="labelStyle">{labelv}</label>
+      <label className="Enterprise__labelStyle">{labelv}</label>
       <input type="text" name={namev} placeholder={placeholderv} />
     </div>
   );
@@ -12,7 +12,7 @@ function EnterpriseInput({ labelv, namev, placeholderv }) {
 export default function EnterpriseCreationForm() {
   return (
     <>
-      <div className="oneColumn">
+      <div className="Enterprise__oneColumn">
         <EnterpriseInput
           labelv={"Nombre de la empresa"}
           namev={"nombre"}
@@ -20,7 +20,7 @@ export default function EnterpriseCreationForm() {
         />
       </div>
 
-      <div className="oneColumn">
+      <div className="Enterprise__oneColumn">
         <EnterpriseInput
           labelv={"Dirección de la empresa"}
           namev={"direccion"}
@@ -28,9 +28,9 @@ export default function EnterpriseCreationForm() {
         />
       </div>
 
-      <div className="oneColumn">
+      <div className="Enterprise__oneColumn">
         <div>
-          <label className="labelStyle">Número de empleados participantes</label>
+          <label className="Enterprise__labelStyle">Número de empleados participantes</label>
           <input type="number" name="num_empleados" placeholder="10" />
         </div>
       </div>

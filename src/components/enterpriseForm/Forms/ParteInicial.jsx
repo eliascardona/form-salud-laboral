@@ -17,25 +17,25 @@ export default function ParteInicial({ step, setStep }) {
   }
 
   return (
-    <div className="form-container">
+    <div className="Enterprise__form-container">
       <h2>Bienvenido</h2>
       <span style={{ fontSize: '1.125em' }}>
         Al llenar este formulario, su organización confirma la participación en el programa de "Salud laboral de la UAA"
       </span>
       <form
         id="form1"
-        className="formStyle"
+        className="Enterprise__formStyle"
         onSubmit={async (e) => {
           await handleUpdate(e)
         }}
       >
-        <div className="static-fields-grid" id="opcion-multiple-parteInicial">
+        <div className="Enterprise__static-fields-grid" id="opcion-multiple-parteInicial">
           <EnterpriseCreationForm />
         </div>
-        <div className="button-container">
+        <div className="Enterprise__button-container">
           <button
             type="submit"
-            className="button"
+            className="Enterprise__button"
           >
             {"enviar"}
           </button>

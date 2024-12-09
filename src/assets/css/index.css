@@ -7,6 +7,33 @@ body {
   color: #2c3e50;
   margin: 0;
 }
+.responsiveNavButton {
+	font-size: 1.25em;
+	font-weight: 600;
+	display: none;
+}
+
+.MobileDevice__visible {
+	display: none;
+}
+
+@media (max-width: 869px) {
+	.MobileDevice__hidden {
+		display: none;
+	}
+
+	.MobileDevice__visible {
+		display: block;
+	}
+
+	.responsiveNavButton {
+		display: block;
+	}
+}
+
+
+
+/* old styles */
 .button {
   border: 2px solid #27374d;
   color: black;

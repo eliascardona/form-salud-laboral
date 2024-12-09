@@ -9,6 +9,7 @@
   border-radius: var(--border-radius);
   cursor: pointer;
 }
+
 .Navbar__activator_item2 {
   color: var(--link-color);
   text-decoration: none;
@@ -17,6 +18,7 @@
   border-radius: var(--border-radius);
   transition: background-color 0.3s ease;
 }
+
 .Navbar__activator_item2:not(.active):hover {
   background-color: var(--link-hover-bg);
   color: white;
@@ -42,12 +44,15 @@
   top: 67px;
   left: 0;
   bottom: 0;
-  z-index: 2; /* Encima del overlay */
+  z-index: 2;
+  /* Encima del overlay */
   transition: transform 0.3s ease-in-out;
   transition: all 0.3s ease;
   transform: translateX(0);
-  scrollbar-width: thin; /* Firefox */
-  scrollbar-color: #3a7bd5 #e4e3e3; /* Firefox */
+  scrollbar-width: thin;
+  /* Firefox */
+  scrollbar-color: #3a7bd5 #e4e3e3;
+  /* Firefox */
 }
 
 /* Contenido principal */
@@ -64,7 +69,8 @@
 
 /* Reservar espacio para el scrollbar */
 .Navbar__nav-sections {
-  padding-right: 12px; /* Ancho del scrollbar */
+  padding-right: 12px;
+  /* Ancho del scrollbar */
 }
 
 /* Estilos para el scrollbar en Chrome, Safari y Opera */
@@ -94,20 +100,25 @@
 }
 
 .sidebar:not(.scrollbar-visible) {
-  scrollbar-color: transparent transparent; /* Firefox */
+  scrollbar-color: transparent transparent;
+  /* Firefox */
 }
 
 /* Overlay */
 .Navbar__overlay {
-  display: none; /* Oculto por defecto */
+  display: none;
+  /* Oculto por defecto */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
-  backdrop-filter: blur(5px); /* Efecto de desenfoque */
-  z-index: 1; /* Debajo de la sidebar pero encima del contenido principal */
+  background: rgba(0, 0, 0, 0.5);
+  /* Fondo semi-transparente */
+  backdrop-filter: blur(5px);
+  /* Efecto de desenfoque */
+  z-index: 1;
+  /* Debajo de la sidebar pero encima del contenido principal */
 }
 
 .Navbar__overlay .Navbar__active {
@@ -275,7 +286,8 @@
 
 /* Botón de toggle */
 .Navbar__toggle-btn {
-  position: fixed; /* Asegura que esté siempre visible */
+  position: fixed;
+  /* Asegura que esté siempre visible */
   top: 20px;
   left: 15px;
   background-color: transparent;
@@ -283,7 +295,8 @@
   color: #000000;
   cursor: pointer;
   font-size: 1.5em;
-  z-index: 4; /* Encima del overlay y sidebar */
+  z-index: 4;
+  /* Encima del overlay y sidebar */
   padding: 0;
   width: 40px;
   height: 40px;
@@ -292,8 +305,10 @@
   justify-content: center;
   transition: max-height 0.3s ease-out;
 }
+
 .Navbar__btn-open {
-  position: fixed; /* Asegura que esté siempre visible */
+  position: fixed;
+  /* Asegura que esté siempre visible */
   top: 20px;
   left: 21%;
   background-color: transparent;
@@ -301,7 +316,8 @@
   color: #000000;
   cursor: pointer;
   font-size: 1.5em;
-  z-index: 5; /* Encima del overlay y sidebar */
+  z-index: 5;
+  /* Encima del overlay y sidebar */
   padding: 0;
   width: 40px;
   height: 40px;
@@ -310,8 +326,10 @@
   justify-content: center;
   transition: all 0.3s ease;
 }
+
 .Navbar__btn-close {
-  position: fixed; /* Asegura que esté siempre visible */
+  position: fixed;
+  /* Asegura que esté siempre visible */
   top: 20px;
   left: 15px;
   background-color: transparent;
@@ -319,7 +337,8 @@
   color: #000000;
   cursor: pointer;
   font-size: 1.5em;
-  z-index: 5; /* Encima del overlay y sidebar */
+  z-index: 5;
+  /* Encima del overlay y sidebar */
   padding: 0;
   width: 40px;
   height: 40px;
@@ -337,16 +356,19 @@
 .Navbar____nav-closed {
   margin-left: 0%;
 }
+
 @media screen and (max-width: 869px) {
   .Navbar____sidebar {
     width: 28%;
   }
+
   .Navbar____nav-closed {
     margin-left: 0%;
   }
 
   .Navbar__btn-open {
-    position: fixed; /* Asegura que esté siempre visible */
+    position: fixed;
+    /* Asegura que esté siempre visible */
     top: 20px;
     left: 29%;
     background-color: transparent;
@@ -354,7 +376,8 @@
     color: #000000;
     cursor: pointer;
     font-size: 1.5em;
-    z-index: 5; /* Encima del overlay y sidebar */
+    z-index: 5;
+    /* Encima del overlay y sidebar */
     padding: 0;
     width: 40px;
     height: 40px;
@@ -367,10 +390,13 @@
 
 /* Responsividad */
 @media screen and (max-width: 869px) {
+
   /* Ajustes para la barra lateral en móviles */
   .Navbar____sidebar {
-    width: 40%; /* Ocupar 80% del ancho de la pantalla */
-    transform: translateX(-100%); /* Cerrada por defecto */
+    width: 40%;
+    /* Ocupar 80% del ancho de la pantalla */
+    transform: translateX(-100%);
+    /* Cerrada por defecto */
   }
 
   /* Mostrar el sidebar cuando no tiene la clase 'closed' */
@@ -385,19 +411,23 @@
 
   /* Ajustes para el contenido principal */
   .Navbar____main-content {
-    margin-left: 0; /* No desplazar el contenido */
+    margin-left: 0;
+    /* No desplazar el contenido */
   }
 
   /* Asegurar que el botón de toggle esté siempre accesible */
   .Navbar____toggle-btn {
-    position: fixed; /* Asegura que esté siempre visible */
+    position: fixed;
+    /* Asegura que esté siempre visible */
     top: 20px;
     left: 15px;
-    z-index: 4; /* Encima del overlay y sidebar */
+    z-index: 4;
+    /* Encima del overlay y sidebar */
   }
 
   .Navbar__btn-open {
-    position: fixed; /* Asegura que esté siempre visible */
+    position: fixed;
+    /* Asegura que esté siempre visible */
     top: 20px;
     left: 41%;
     background-color: transparent;
@@ -405,7 +435,8 @@
     color: #000000;
     cursor: pointer;
     font-size: 1.5em;
-    z-index: 5; /* Encima del overlay y sidebar */
+    z-index: 5;
+    /* Encima del overlay y sidebar */
     padding: 0;
     width: 40px;
     height: 40px;
@@ -414,8 +445,10 @@
     justify-content: right;
     transition: all 0.3s ease;
   }
+
   .Navbar__btn-close {
-    position: fixed; /* Asegura que esté siempre visible */
+    position: fixed;
+    /* Asegura que esté siempre visible */
     top: 20px;
     left: 15px;
     background-color: transparent;
@@ -423,7 +456,8 @@
     color: #000000;
     cursor: pointer;
     font-size: 1.5em;
-    z-index: 5; /* Encima del overlay y sidebar */
+    z-index: 5;
+    /* Encima del overlay y sidebar */
     padding: 0;
     width: 40px;
     height: 40px;
@@ -441,10 +475,13 @@
 
 /* Responsividad */
 @media screen and (max-width: 869px) {
+
   /* Ajustes para la barra lateral en móviles */
   .Navbar____sidebar {
-    width: 55%; /* Ocupar 80% del ancho de la pantalla */
-    transform: translateX(-100%); /* Cerrada por defecto */
+    width: 55%;
+    /* Ocupar 80% del ancho de la pantalla */
+    transform: translateX(-100%);
+    /* Cerrada por defecto */
   }
 
   /* Mostrar el sidebar cuando no tiene la clase 'closed' */
@@ -459,19 +496,23 @@
 
   /* Ajustes para el contenido principal */
   .Navbar____main-content {
-    margin-left: 0; /* No desplazar el contenido */
+    margin-left: 0;
+    /* No desplazar el contenido */
   }
 
   /* Asegurar que el botón de toggle esté siempre accesible */
   .Navbar____toggle-btn {
-    position: fixed; /* Asegura que esté siempre visible */
+    position: fixed;
+    /* Asegura que esté siempre visible */
     top: 20px;
     left: 15px;
-    z-index: 4; /* Encima del overlay y sidebar */
+    z-index: 4;
+    /* Encima del overlay y sidebar */
   }
 
   .Navbar__btn-open {
-    position: fixed; /* Asegura que esté siempre visible */
+    position: fixed;
+    /* Asegura que esté siempre visible */
     top: 20px;
     left: 56%;
     background-color: transparent;
@@ -479,7 +520,8 @@
     color: #000000;
     cursor: pointer;
     font-size: 1.5em;
-    z-index: 5; /* Encima del overlay y sidebar */
+    z-index: 5;
+    /* Encima del overlay y sidebar */
     padding: 0;
     width: 40px;
     height: 40px;
@@ -488,8 +530,10 @@
     justify-content: right;
     transition: all 0.3s ease;
   }
+
   .Navbar__btn-close {
-    position: fixed; /* Asegura que esté siempre visible */
+    position: fixed;
+    /* Asegura que esté siempre visible */
     top: 20px;
     left: 15px;
     background-color: transparent;
@@ -497,7 +541,8 @@
     color: #000000;
     cursor: pointer;
     font-size: 1.5em;
-    z-index: 5; /* Encima del overlay y sidebar */
+    z-index: 5;
+    /* Encima del overlay y sidebar */
     padding: 0;
     width: 40px;
     height: 40px;
@@ -520,11 +565,13 @@
   }
 
   .Navbar__sidebar {
-    width: 74%; /* Ocupar 80% del ancho de la pantalla */
+    width: 74%;
+    /* Ocupar 80% del ancho de la pantalla */
   }
 
   .Navbar__btn-open {
-    position: fixed; /* Asegura que esté siempre visible */
+    position: fixed;
+    /* Asegura que esté siempre visible */
     top: 20px;
     left: 75%;
     background-color: transparent;
@@ -532,7 +579,8 @@
     color: #000000;
     cursor: pointer;
     font-size: 1.5em;
-    z-index: 5; /* Encima del overlay y sidebar */
+    z-index: 5;
+    /* Encima del overlay y sidebar */
     padding: 0;
     width: 40px;
     height: 40px;
@@ -541,8 +589,10 @@
     justify-content: center;
     transition: all 0.3s ease;
   }
+
   .Navbar__btn-close {
-    position: fixed; /* Asegura que esté siempre visible */
+    position: fixed;
+    /* Asegura que esté siempre visible */
     top: 20px;
     left: 15px;
     background-color: transparent;
@@ -550,7 +600,8 @@
     color: #000000;
     cursor: pointer;
     font-size: 1.5em;
-    z-index: 5; /* Encima del overlay y sidebar */
+    z-index: 5;
+    /* Encima del overlay y sidebar */
     padding: 0;
     width: 40px;
     height: 40px;

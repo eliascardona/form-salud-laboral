@@ -1,21 +1,19 @@
+import { useState } from "react";
 import ProfileOptions from "./ui/profileOptionsUI/ProfileOptions";
+import LogicSidebar from "./logicSidebar/LogicSidebar";
 import LogicNavcat from "./navcats/LogicNavcat";
 import "./styles/navbar.css";
+import "./styles/sideNavbar.css";
 
 export default function SideNavbar({ isModalOpen, setModalToOpen }) {
   return (
-    <div className={isModalOpen ? 'SNavbar__modalContainerActive' : 'SNavbar__modalContainer'}>
-      <div className="SNavbar__mainLy">
-        <ProfileOptions />
-        <span
-          className="SNavbar__close"
-          onClick={() => setModalToOpen(false)}
-        >
-          cerrar
-        </span>
-        {/* <LogicNavcat /> */}
-        <span></span>
-      </div>
-    </div>
+    <>
+      <LogicSidebar 
+        activeClassName={isModalOpen ? 'SNavbar__modalOpen' : 'SNavbar__modalClose'}
+        setModalToOpen={setModalToOpen}
+      >
+        <ProfileOptions greet={'hola'} role={'lol'} />
+      </LogicSidebar>
+    </>
   )
 }

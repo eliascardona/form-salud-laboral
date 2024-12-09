@@ -5,6 +5,7 @@
   border-radius: 10px;
   border: 1px solid #12121206;
   transition: all 0.3s ease;
+  height: max-content;
 }
 
 .ProfileOptions__user-profile-content {

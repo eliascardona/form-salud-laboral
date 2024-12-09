@@ -1,5 +1,5 @@
-import MainHeader from "../../../components/enterpriseForm/ui/headers/MainHeader"
-import BottomBar from "../../../components/enterpriseForm/ui/bottomBar/BottomBar"
+import MainHeader from "../../../components/employeeForm/ui/headers/MainHeader"
+import BottomBar from "../../../components/employeeForm/ui/bottomBar/BottomBar"
 import ParteInicial from "../../../components/enterpriseForm/Forms/ParteInicial"
 
 import "../../../assets/css/App.css"

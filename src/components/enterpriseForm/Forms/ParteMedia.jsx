@@ -66,17 +66,17 @@ export default function ParteMedia({
   }, [requestBody])
 
   return (
-    <div className="form-container">
+    <div className="Enterprise__form-container">
       <h3>{sectionTitle}</h3>
       <form
         id="form2"
-        className="formStyle"
+        className="Enterprise__formStyle"
         onSubmit={(e) => {
           handleUpdate(e);
           setStep(step + 1);
         }}
       >
-        <div className="selects-grid" id={`opcion-multiple-parte${step}`}>
+        <div className="Enterprise__selects-grid" id={`opcion-multiple-parte${step}`}>
           {surveyTemplate
             .reduce((rows, pregunta, index) => {
               if (index % 6 === 0) rows.push([]);
@@ -88,7 +88,7 @@ export default function ParteMedia({
                 key={rowIndex}
                 title={`${sectionTitle}, seccion ${rowIndex + 1}`}
               >
-                <div className="grid-two-columns">
+                <div className="Enterprise__grid-two-columns">
                   {row.map((pregunta, i) => (
                     <CustomSelect
                       key={i}
@@ -102,17 +102,17 @@ export default function ParteMedia({
               </Accordion>
             ))}
         </div>
-        <div className="button-container">
+        <div className="Enterprise__button-container">
           <button
             type="button"
-            className="button"
+            className="Enterprise__button"
             onClick={(e) => {
               setStep(step - 1);
             }}
           >
             {"atras"}
           </button>
-          <button type="submit" className="button">
+          <button type="submit" className="Enterprise__button">
             {"siguiente"}
           </button>
         </div>

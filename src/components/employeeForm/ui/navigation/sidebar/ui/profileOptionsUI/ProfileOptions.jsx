@@ -1,6 +1,6 @@
 import './ProfileOptions.css'
 
-export default function ProfileOptions() {
+export default function ProfileOptions({ greet, role }) {
     return (
         <div className='ProfileOptions__user-profile'>
             <div className='ProfileOptions__user-profile-content'>
@@ -8,8 +8,8 @@ export default function ProfileOptions() {
                     <ion-icon Name='ProfileOptions__people-outline'></ion-icon>
                 </div>
                 <div className='ProfileOptions__user-details'>
-                    <span className='ProfileOptions__username'>Hola suario</span>
-                    <span className='ProfileOptions__user-role'>Rol del Usuario</span>
+                    <span className='ProfileOptions__username'>{greet}</span>
+                    <span className='ProfileOptions__user-role'>Rol de usuario: {role}</span>
                 </div>
             </div>
         </div>
