@@ -1,0 +1,35 @@
+.Wrapper__wrapper {
+    max-width: 80%;
+    /* Ancho máximo del contenedor */
+    margin: 0 auto;
+    /* Centrar el carousel */
+    overflow-x: auto;
+    /* Habilitar desplazamiento horizontal */
+    overflow-y: hidden;
+    /* Ocultar desplazamiento vertical */
+    white-space: nowrap;
+    /* Mantener elementos en una sola línea */
+    display: block;
+    /* Asegurar que el wrapper sea un bloque */
+    border: 1px solid #222;
+    /* Opcional: borde para visualización */
+}
+
+.Wrapper__content {
+    display: inline-flex;
+    /* Crear layout horizontal */
+    gap: 1rem;
+    /* Separación entre elementos */
+}
+
+.Wrapper__item {
+    min-width: 200px;
+    /* Ancho mínimo de cada elemento */
+    flex: 0 0 auto;
+    /* Asegurar que los elementos no se redimensionen */
+    background-color: #f0f0f0;
+    /* Fondo para visualización */
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+}

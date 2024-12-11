@@ -1,122 +1,46 @@
-import { useState, useEffect } from "react"
-import CustomSelect from "../CustomSelect/CustomSelect"
-import { useFormStore, useRequestBodyStore } from '../../../lib/(zustand)/formStore'
-import { calculateScores, transformateArray } from "../../../lib/dataHandling/serverRequest"
-import { ATRIBUTOS_DE_ENTIDAD } from "../../../lib/(ENTITIES_ENUMS)/extenseForm/enum"
-import Accordion from "../ui/commonUI/accordion/Accordion"
+import { firestore } from "../../../lib/sdk/firebase"
+import { doc, setDoc } from "firebase/firestore"
+import EnterpriseFormTwo from "./EnterpriseFormTwo"
 import "./styles/DynamicForms.css"
 
 
-export default function ParteMedia({
-  surveyTemplate = [],
-  sectionTitle,
-  sectionId,
-  sectionKey,
-  step,
-  setStep,
-}) {
-  const inputValue = useFormStore((state) => state.inputValue);
-  const setInputValue = useFormStore((state) => state.setInputValue);
-  const requestBody = useRequestBodyStore((state) => state.requestBody);
-  const setRequestBody = useRequestBodyStore((state) => state.setRequestBody);
-
-  const [originalArrayTemplate, setOriginalArrayTemplate] = useState([])
-  const [scoreProperFormat, setScoreProperFormat] = useState(null)
-
-  useEffect(() => {
-    function copyArray() {
-      setOriginalArrayTemplate(prev => ([
-        ...surveyTemplate
-      ]))
-    }
-    copyArray()
-  }, [inputValue])
-
-  const handleUpdate = (evt) => {
+export default function ParteInicial({ step, setStep }) {
+  const handleUpdate = async (evt) => {
     evt.preventDefault()
-    const formData = new FormData(evt.target);
-    const newInputValues = Object.fromEntries(formData)
-    setInputValue({ ...inputValue, ...newInputValues })
+    const formData = new FormData(evt.target)
+    const formatedData = Object.fromEntries(formData)
 
-    const formatoDelENUM = ATRIBUTOS_DE_ENTIDAD[sectionKey]
-
-    const nuevo = transformateArray(originalArrayTemplate, newInputValues)
-
-    if(nuevo.length > 0) {
-      const result = calculateScores(nuevo, formatoDelENUM, sectionKey)
-
-      console.log(`Calculo de puntajes de ${sectionKey.toUpperCase()}`)
-      console.log(result)
-      
-
-      result !== null && setScoreProperFormat(result)
-
-      scoreProperFormat != null && setRequestBody({ ...requestBody, ...scoreProperFormat })
-    } else {
-      console.log('error transformando el formulario')
-    }
+    const fecha = new Date().toISOString()
+    await setDoc(doc(firestore, `empresasParticipantes/${formatedData.nombre}-${fecha}`), {
+      ...formatedData
+    })
   }
-
-  useEffect(() => {
-    function logOfRequestBody() {
-      console.log("hasta ahora llevamos esto ->")
-      console.log(requestBody)
-    }
-    logOfRequestBody()
-  }, [requestBody])
 
   return (
     <div className="Enterprise__form-container">
-      <h3>{sectionTitle}</h3>
+      <h2>Bienvenido</h2>
+      <span style={{ fontSize: '1.125em' }}>
+        Al llenar este formulario, su organización confirma la participación en el programa de "Salud laboral de la UAA"
+      </span>
       <form
-        id="form2"
+        id="form1"
         className="Enterprise__formStyle"
-        onSubmit={(e) => {
-          handleUpdate(e);
-          setStep(step + 1);
+        onSubmit={async (e) => {
+          await handleUpdate(e)
         }}
       >
-        <div className="Enterprise__selects-grid" id={`opcion-multiple-parte${step}`}>
-          {surveyTemplate
-            .reduce((rows, pregunta, index) => {
-              if (index % 6 === 0) rows.push([]);
-              rows[rows.length - 1].push(pregunta);
-              return rows;
-            }, [])
-            .map((row, rowIndex) => (
-              <Accordion
-                key={rowIndex}
-                title={`${sectionTitle}, seccion ${rowIndex + 1}`}
-              >
-                <div className="Enterprise__grid-two-columns">
-                  {row.map((pregunta, i) => (
-                    <CustomSelect
-                      key={i}
-                      pregunta={pregunta.pregunta}
-                      preguntaInputName={pregunta.preguntaInputName}
-                      opcionesArray={pregunta.opciones}
-                      tipo={pregunta.tipo}
-                    />
-                  ))}
-                </div>
-              </Accordion>
-            ))}
+        <div className="Enterprise__static-fields-grid" id="opcion-multiple-parteInicial">
+          <EnterpriseFormTwo />
         </div>
         <div className="Enterprise__button-container">
           <button
-            type="button"
+            type="submit"
             className="Enterprise__button"
-            onClick={(e) => {
-              setStep(step - 1);
-            }}
           >
-            {"atras"}
-          </button>
-          <button type="submit" className="Enterprise__button">
-            {"siguiente"}
+            {"enviar"}
           </button>
         </div>
       </form>
     </div>
-  );
+  )
 }

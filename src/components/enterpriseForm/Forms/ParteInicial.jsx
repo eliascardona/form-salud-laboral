@@ -1,6 +1,6 @@
 import { firestore } from "../../../lib/sdk/firebase"
 import { doc, setDoc } from "firebase/firestore"
-import EnterpriseCreationForm from "./EnterpriseCreationForm"
+import EnterpriseFormOne from "./EnterpriseFormOne"
 import "./styles/DynamicForms.css"
 
 
@@ -30,7 +30,7 @@ export default function ParteInicial({ step, setStep }) {
         }}
       >
         <div className="Enterprise__static-fields-grid" id="opcion-multiple-parteInicial">
-          <EnterpriseCreationForm />
+          <EnterpriseFormOne />
         </div>
         <div className="Enterprise__button-container">
           <button

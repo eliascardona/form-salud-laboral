@@ -7,6 +7,7 @@ import EnterpriseForm from './routes/enterpriseForm/EnterpriseForm'
 import SignInPage from './routes/auth/signin/SignInPage'
 import SignUpPage from './routes/auth/signup/SignUpPage'
 import AddAdminPage from './routes/auth/claims/AddAdminPage'
+import HomePageUI from '../components/employeeForm/(completePages)/home/HomePageUI'
 
 
 export default function Page() {
@@ -17,6 +18,7 @@ export default function Page() {
 		signInPage: <SignInPage />,
 		signUpPage: <SignUpPage />,
 		addAdminPage: <AddAdminPage />,
+		homePage: <HomePageUI />,
 	}
 
 	return (
@@ -26,6 +28,11 @@ export default function Page() {
 					path="*"
 					element={pagesDirectory.notFound}
 				/>{/*  UI response for not valid path segment  */}
+				<Route
+					path="/"
+					exact
+					element={pagesDirectory.homePage}
+				/>
 				<Route
 					path="/registrar-empresa"
 					element={pagesDirectory.enterpriseForm}
